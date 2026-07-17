@@ -436,6 +436,7 @@
 
 /* Equipe */
 .fundador-card {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 32px;
@@ -444,6 +445,46 @@
   border-radius: var(--radius);
   padding: 32px;
   margin-bottom: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.fundador-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.fundador-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    115deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #7c4dff,
+    #ff2d78
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: rainbow-shift 3s linear infinite;
+}
+
+.fundador-card:hover::after {
+  opacity: 1;
 }
 
 .fundador-foto {
@@ -500,8 +541,9 @@
 }
 
 .equipe-card {
+  position: relative;
   background: var(--bg-alt);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 24px;
   display: flex;
@@ -509,6 +551,46 @@
   align-items: center;
   text-align: center;
   gap: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.equipe-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.equipe-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    115deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #7c4dff,
+    #ff2d78
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: rainbow-shift 3s linear infinite;
+}
+
+.equipe-card:hover::after {
+  opacity: 1;
 }
 
 .equipe-foto {
