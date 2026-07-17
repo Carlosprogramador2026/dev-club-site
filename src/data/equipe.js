@@ -21,9 +21,9 @@ export const EQUIPE = [
     bio: "Palestrante de TI e professor de programação. Front-end com React, Angular, Svelte e TypeScript; back-end com Node, NestJS e bancos de dados relacionais e não relacionais; experiência com AWS (API Gateway, Lambda, S3, entre outros) e dashboards em Kibana e Grafana.",
   },
   {
-    nome: "Juliana Costa",
+    nome: "Fernanda Costa",
     cargo: "Mentora de Carreira e Psicóloga",
-    foto: asset("juliana-costa.png"),
+    foto: asset("fernanda-costa.png"),
     bio: "Mentora de carreira, orientadora profissional, professora e estudante de Psicologia. Depois de 10 anos numa multinacional, decidiu empreender orientando profissionais em suas carreiras — já acompanhou mais de 700 pessoas, atuando também como treinadora corporativa, palestrante e analista comportamental. Foi comissária de voo por mais de 10 anos, experiência que reforçou sua visão sobre comportamento humano, atendimento e liderança sob pressão. Hoje ajuda alunos da dev club em momentos de transição de carreira.",
   },
   {

@@ -5,6 +5,7 @@ import Sobre from "../components/Sobre"
 import Cursos from "../components/Cursos"
 import Mercado from "../components/Mercado"
 import Diferenciais from "../components/Diferenciais"
+import IasIlimitadas from "../components/IasIlimitadas"
 import Equipe from "../components/Equipe"
 import Depoimentos from "../components/Depoimentos"
 import EmpresasAlunos from "../components/EmpresasAlunos"
@@ -27,6 +28,7 @@ export default function Home() {
       <Cursos />
       <Mercado />
       <Diferenciais />
+      <IasIlimitadas />
       <Equipe />
       <Depoimentos />
       <EmpresasAlunos />

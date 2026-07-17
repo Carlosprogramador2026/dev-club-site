@@ -947,6 +947,40 @@
   }
 }
 
+/* IAs ilimitadas */
+.ias-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ias-icone {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ias-icone:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 20px 40px rgba(139, 47, 206, 0.4),
+    0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 640px) {
+  .ias-icone {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    border-radius: 16px;
+  }
+}
+
 /* Depoimentos */
 .depoimentos-grid {
   display: grid;
