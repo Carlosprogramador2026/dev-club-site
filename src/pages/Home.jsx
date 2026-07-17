@@ -7,6 +7,7 @@ import Mercado from "../components/Mercado"
 import Diferenciais from "../components/Diferenciais"
 import Equipe from "../components/Equipe"
 import Depoimentos from "../components/Depoimentos"
+import EmpresasAlunos from "../components/EmpresasAlunos"
 import FaqGeral from "../components/FaqGeral"
 import Cta from "../components/Cta"
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Diferenciais />
       <Equipe />
       <Depoimentos />
+      <EmpresasAlunos />
       <FaqGeral />
       <Cta />
     </>

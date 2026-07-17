@@ -1509,6 +1509,49 @@
   margin: 0;
 }
 
+/* Empresas dos alunos */
+.empresas-video-frame {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(17, 10, 26, 0.55);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 50px rgba(139, 47, 206, 0.18), 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.empresas-video-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    115deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #7c4dff,
+    #ff2d78
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.55;
+  pointer-events: none;
+  animation: rainbow-shift 5s linear infinite;
+}
+
+.empresas-video-frame video {
+  width: 100%;
+  display: block;
+  opacity: 0.94;
+}
+
 /* FAQ */
 .faq-list {
   display: flex;
@@ -1714,6 +1757,7 @@
 }
 
 .footer-dev-icone {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1722,7 +1766,7 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--text-dim);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.3s ease;
 }
 
 .footer-dev-icone svg {
@@ -1730,9 +1774,42 @@
   height: 14px;
 }
 
+.footer-dev-icone::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(
+    115deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #7c4dff,
+    #ff2d78
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: rainbow-shift 3s linear infinite;
+}
+
 .footer-dev-icone:hover {
-  color: var(--purple);
-  border-color: var(--purple);
+  color: var(--text);
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.08);
+}
+
+.footer-dev-icone:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 900px) {
