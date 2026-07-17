@@ -238,7 +238,7 @@
   height: 44px;
   border-radius: 50%;
   border: 2px solid var(--bg);
-  box-shadow: 0 0 0 1px rgba(139, 47, 206, 0.4);
+  box-shadow: 0 0 0 2px var(--olive);
   margin-left: -12px;
   object-fit: cover;
 }
