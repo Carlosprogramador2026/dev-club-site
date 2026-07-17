@@ -112,6 +112,7 @@ export const CURSOS = [
       "Testes automatizados e organização de projeto",
     ],
     temVideo: true,
+    videoId: "CtBoYh959t8",
     instrutor: {
       ...RODOLFO,
       bio: "Professor dessa trilha de back-end, com experiência real em Node.js, NestJS e bancos de dados relacionais e não relacionais.",
@@ -132,6 +133,7 @@ export const CURSOS = [
       "Boas práticas de segurança e escalabilidade",
     ],
     temVideo: true,
+    videoId: "-hfvH1qGJas",
     instrutor: {
       ...RODOLFO,
       bio: "Conduz essa trilha de cloud com experiência prática em AWS (API Gateway, Lambda, S3, entre outros) e monitoramento com Kibana e Grafana.",
@@ -152,6 +154,7 @@ export const CURSOS = [
       "Boas práticas de performance mobile",
     ],
     temVideo: true,
+    videoId: "wLHOCB2U2BY",
     instrutor: {
       ...RODOLFO,
       bio: "Orienta essa trilha de mobile aplicando a mesma base de React que usa no dia a dia pra construir interfaces, agora no ambiente mobile com React Native.",
@@ -172,6 +175,7 @@ export const CURSOS = [
       "Boas práticas e limites do uso de IA em produção",
     ],
     temVideo: true,
+    videoId: "mLyfq1G3ZRI",
     instrutor: {
       ...MATEUS,
       bio: "Especialista em como agentes de inteligência artificial são projetados e usados na prática — é quem assina essa trilha.",
@@ -181,6 +185,24 @@ export const CURSOS = [
 
 export function getCursoBySlug(slug) {
   return CURSOS.find((curso) => curso.slug === slug)
+}
+
+export const INVESTIMENTO_CURSO = {
+  titulo: "Formação DevClub Full Stack",
+  beneficios: [
+    "Do zero à carreira de programador bem remunerado",
+    "Formação completa com todas as linguagens de programação",
+    "Suporte humano 7 dias por semana",
+    "Preparação para o mercado de trabalho",
+    "Projeto bônus de R$ 1.000 em 7 dias",
+    "Comunidade DevClub",
+    "Indicação para o mercado de trabalho",
+    "1 ano de acesso ilimitado à formação",
+  ],
+  parcelas: "12x de R$ 199",
+  avista: "ou R$ 1.997,00 à vista",
+  garantia:
+    "7 dias de garantia incondicional — se não gostar, devolvemos 100% do valor, sem burocracia.",
 }
 
 // Perfil de aluno da dev club (base: entrevista de instalação do MazyOS).

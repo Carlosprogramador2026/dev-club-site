@@ -1,6 +1,14 @@
 import { useParams, Link, Navigate } from "react-router-dom"
-import { getCursoBySlug, PUBLICO_ALVO, FAQ_CURSO } from "../data/cursos"
+import {
+  getCursoBySlug,
+  PUBLICO_ALVO,
+  FAQ_CURSO,
+  INVESTIMENTO_CURSO,
+} from "../data/cursos"
 import FaqAccordion from "../components/FaqAccordion"
+
+const TYPEFORM_URL =
+  "https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
 
 export default function CursoPage() {
   const { slug } = useParams()
@@ -92,13 +100,48 @@ export default function CursoPage() {
         <FaqAccordion items={FAQ_CURSO} />
 
         <a
-          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
+          href={TYPEFORM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary curso-cta"
         >
           Quero fazer esse curso
         </a>
+
+        <div className="mba-investimento" style={{ marginTop: 32 }}>
+          <div className="mba-investimento-beneficios">
+            <h3 style={{ margin: "0 0 4px" }}>{INVESTIMENTO_CURSO.titulo}</h3>
+            {INVESTIMENTO_CURSO.beneficios.map((b) => (
+              <p key={b}>
+                <span aria-hidden="true">✓</span> {b}
+              </p>
+            ))}
+            <p style={{ marginTop: 8, opacity: 0.8 }}>
+              🛡️ {INVESTIMENTO_CURSO.garantia}
+            </p>
+          </div>
+          <div className="mba-investimento-preco">
+            <p className="mba-investimento-de">Investimento:</p>
+            <strong className="mba-investimento-parcela">
+              {INVESTIMENTO_CURSO.parcelas}
+            </strong>
+            <span className="mba-investimento-avista">
+              {INVESTIMENTO_CURSO.avista}
+            </span>
+            <span className="mba-investimento-pagamento">
+              Pagamento por cartão, PIX ou boleto parcelado
+            </span>
+            <a
+              href={TYPEFORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Quero entrar no DevClub
+            </a>
+            <span className="mba-investimento-seguro">🔒 Compra segura</span>
+          </div>
+        </div>
       </div>
     </section>
   )

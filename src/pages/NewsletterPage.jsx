@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import Reveal from "../components/Reveal"
+import { NEWSLETTER_POSTS } from "../data/newsletterPosts"
 
 const BENEFICIOS = [
   {
@@ -39,6 +40,21 @@ export default function NewsletterPage() {
               <div className="diferencial-card">
                 <h3>{b.titulo}</h3>
                 <p>{b.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <h2 className="curso-section-title">Exemplos de edições</h2>
+        <p className="section-subtitle" style={{ marginBottom: 32 }}>
+          Uma amostra do que quem assina recebe todo dia no e-mail.
+        </p>
+        <div className="newsletter-posts-grid" style={{ marginBottom: 56 }}>
+          {NEWSLETTER_POSTS.map((post, i) => (
+            <Reveal key={post.slug} delay={i * 80}>
+              <div className="blog-card">
+                <h3>{post.titulo}</h3>
+                <p>{post.resumo}</p>
               </div>
             </Reveal>
           ))}

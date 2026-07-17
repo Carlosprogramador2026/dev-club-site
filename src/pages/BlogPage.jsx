@@ -30,7 +30,7 @@ export default function BlogPage() {
         </div>
 
         <a
-          href="https://www.devclub.com.br/blog"
+          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary curso-cta"
