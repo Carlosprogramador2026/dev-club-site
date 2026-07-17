@@ -1,6 +1,5 @@
-// Posts de EXEMPLO — substitua título e resumo pelo conteúdo real do blog
-// antes de publicar. Basta título + um resumo curto, não precisa colar o
-// artigo inteiro. Categorias seguem as 8 trilhas reais da dev club.
+// Título real + resumo curto (2-3 frases) pra cada post do blog.
+// Categorias seguem as 8 trilhas reais da dev club.
 export const POSTS = [
   {
     slug: "html-guia-completo",
@@ -17,45 +16,45 @@ export const POSTS = [
       "Comparação técnica entre as três principais ferramentas de build do ecossistema JS — performance, compatibilidade e quando faz sentido usar cada uma em projetos modernos.",
   },
   {
-    slug: "exemplo-react",
+    slug: "react-server-components-guia",
     categoria: "React",
-    titulo: "[Título do post — exemplo]",
+    titulo: "React 18 Server Components: guia prático para renderização no servidor",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Como os React Server Components movem parte da renderização pro servidor, reduzindo o JavaScript enviado ao navegador. Cobre a diferença entre Server e Client Components, quando usar cada um, e um exemplo prático com a diretiva 'use client'.",
   },
   {
-    slug: "exemplo-node-backend",
+    slug: "automatize-workflow-n8n-nodejs-ia",
     categoria: "Node.js & Back-end",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Automatize seu workflow com n8n, Node.js e IA",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Como combinar n8n com Node.js e uma API de IA pra criar automações que processam tarefas repetitivas — dos nós de HTTP Request e Code Node até um fluxo prático de exemplo, de ponta a ponta.",
   },
   {
-    slug: "exemplo-cloud-devops",
+    slug: "cloud-devops-escalabilidade-automacao",
     categoria: "Cloud & DevOps",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Cloud & DevOps: escalabilidade, automação e alta performance",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Cloud Computing e DevOps tornam sistemas mais rápidos, seguros e eficientes: a nuvem escala recursos conforme a demanda, enquanto o DevOps automatiza processos e acelera entregas — reduzindo custos e aumentando a disponibilidade dos serviços.",
   },
   {
-    slug: "exemplo-mobile",
+    slug: "desenvolvimento-mobile-android-ios",
     categoria: "Mobile",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Desenvolvimento mobile: aplicativos inteligentes para Android e iOS",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Como criar aplicativos modernos, rápidos e intuitivos pra Android e iOS, com foco em desempenho, segurança e experiência do usuário — soluções que aumentam o engajamento e dão acesso prático aos serviços a qualquer hora.",
   },
   {
-    slug: "exemplo-ia-automacao",
+    slug: "ia-automacao-eficiencia-inovacao",
     categoria: "IA & Automação",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Inteligência artificial & automação: eficiência e inovação para o seu negócio",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Como IA e automação otimizam atendimentos, analisam dados e reduzem custos, executando tarefas de forma inteligente, rápida e precisa — pra experiências mais ágeis e personalizadas.",
   },
   {
-    slug: "exemplo-carreira",
+    slug: "carreira-tecnologia-futuro-sucesso",
     categoria: "Carreira",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Carreira em tecnologia: construa um futuro de sucesso",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Uma carreira em tech oferece crescimento e alta demanda no mercado: com desenvolvimento contínuo de habilidades e experiência prática, dá pra atuar em projetos de impacto e conquistar oportunidades no Brasil e fora.",
   },
 ]

@@ -10,10 +10,11 @@ export default function BlogPage() {
           ← Voltar pro início
         </Link>
 
-        <span className="section-tag">Blog [exemplo]</span>
+        <span className="section-tag">Blog</span>
         <h1 className="section-title">Conteúdo da dev club</h1>
         <p className="section-subtitle" style={{ marginBottom: 40 }}>
-          Posts de exemplo aguardando os títulos e resumos reais do blog.
+          Conteúdo técnico produzido pela dev club, direto pra você aplicar no
+          dia a dia.
         </p>
 
         <div className="blog-grid">
