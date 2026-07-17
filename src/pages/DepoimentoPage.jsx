@@ -55,9 +55,14 @@ export default function DepoimentoPage() {
           </div>
         )}
 
-        <Link to="/#cta" className="btn btn-primary curso-cta">
+        <a
+          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary curso-cta"
+        >
           Quero começar minha trilha também
-        </Link>
+        </a>
       </div>
     </section>
   )
