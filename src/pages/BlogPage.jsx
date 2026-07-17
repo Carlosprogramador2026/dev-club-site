@@ -19,7 +19,7 @@ export default function BlogPage() {
         <div className="blog-grid">
           {POSTS.map((post, i) => (
             <Reveal key={post.slug} delay={i * 80}>
-              <div className="diferencial-card">
+              <div className="blog-card">
                 <span className="curso-tag">{post.categoria}</span>
                 <h3>{post.titulo}</h3>
                 <p>{post.resumo}</p>
