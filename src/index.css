@@ -121,6 +121,7 @@ img {
 section {
   position: relative;
   padding: 96px 0;
+  scroll-margin-top: 90px;
 }
 
 .section-tag {

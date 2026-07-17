@@ -31,6 +31,10 @@ export default function Navbar() {
     return () => observer.disconnect()
   }, [location.pathname])
 
+  const isCursoPage = location.pathname.startsWith("/cursos/")
+  const isDepoimentoPage = location.pathname.startsWith("/depoimentos/")
+  const isHomeTop = location.pathname === "/" && !activeId
+
   return (
     <header className="navbar">
       <div className="container navbar-inner">
@@ -40,7 +44,9 @@ export default function Navbar() {
         </Link>
 
         <nav className="nav-links">
-          <Link to="/#top">Home</Link>
+          <Link to="/#top" className={isHomeTop ? "active" : undefined}>
+            Home
+          </Link>
 
           <Link
             to="/#sobre"
@@ -53,7 +59,7 @@ export default function Navbar() {
             <Link
               to="/#cursos"
               className={`nav-dropdown-trigger${
-                activeId === "cursos" ? " active" : ""
+                activeId === "cursos" || isCursoPage ? " active" : ""
               }`}
             >
               Formações
@@ -76,13 +82,34 @@ export default function Navbar() {
             I.A
           </Link>
 
-          <Link to="/mba">MBA</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/newsletter">Newsletter</Link>
+          <Link
+            to="/mba"
+            className={location.pathname === "/mba" ? "active" : undefined}
+          >
+            MBA
+          </Link>
+          <Link
+            to="/blog"
+            className={location.pathname === "/blog" ? "active" : undefined}
+          >
+            Blog
+          </Link>
+          <Link
+            to="/newsletter"
+            className={
+              location.pathname === "/newsletter" ? "active" : undefined
+            }
+          >
+            Newsletter
+          </Link>
 
           <Link
             to="/#depoimentos"
-            className={activeId === "depoimentos" ? "active" : undefined}
+            className={
+              activeId === "depoimentos" || isDepoimentoPage
+                ? "active"
+                : undefined
+            }
           >
             Nossos Alunos
           </Link>
