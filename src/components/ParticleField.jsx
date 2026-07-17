@@ -26,9 +26,13 @@ function hexToRgb(hex) {
 }
 
 function fitFontSize(ctx, text, width, height, isMobile) {
-  const maxWidth = width * (isMobile ? 0.68 : 0.82)
+  // No mobile o tamanho é baseado na LARGURA (bem mais parecida entre
+  // aparelhos: ~360-430px) em vez da altura do hero, que varia muito
+  // de aparelho pra aparelho (92vh de telas com proporções diferentes).
+  // Isso mantém o diâmetro da letra consistente entre modelos.
+  const maxWidth = width * (isMobile ? 0.7 : 0.82)
   const maxHeight = isMobile
-    ? Math.min(height * 0.2, width * 0.85)
+    ? Math.min(width * 0.62, height * 0.32)
     : height * 0.4
   ctx.font = `800 ${maxHeight}px "Segoe UI", system-ui, sans-serif`
   const textWidth = ctx.measureText(text).width
@@ -174,6 +178,19 @@ export default function ParticleField() {
       mouse.y = -99999
     }
 
+    function handleTouchMove(e) {
+      if (e.touches.length === 0) return
+      const touch = e.touches[0]
+      const rect = canvas.getBoundingClientRect()
+      mouse.x = (touch.clientX - rect.left) * dpr
+      mouse.y = (touch.clientY - rect.top) * dpr
+    }
+
+    function handleTouchEnd() {
+      mouse.x = -99999
+      mouse.y = -99999
+    }
+
     function handleClick() {
       paletteIndex = (paletteIndex + 1) % PALETTES.length
       const colors = PALETTES[paletteIndex]
@@ -186,6 +203,9 @@ export default function ParticleField() {
     window.addEventListener("resize", resize)
     window.addEventListener("mousemove", handlePointerMove)
     window.addEventListener("mouseleave", handlePointerLeave)
+    window.addEventListener("touchstart", handleTouchMove, { passive: true })
+    window.addEventListener("touchmove", handleTouchMove, { passive: true })
+    window.addEventListener("touchend", handleTouchEnd)
     window.addEventListener("click", handleClick)
 
     function tick() {
@@ -348,6 +368,9 @@ export default function ParticleField() {
       window.removeEventListener("resize", resize)
       window.removeEventListener("mousemove", handlePointerMove)
       window.removeEventListener("mouseleave", handlePointerLeave)
+      window.removeEventListener("touchstart", handleTouchMove)
+      window.removeEventListener("touchmove", handleTouchMove)
+      window.removeEventListener("touchend", handleTouchEnd)
       window.removeEventListener("click", handleClick)
     }
   }, [])
