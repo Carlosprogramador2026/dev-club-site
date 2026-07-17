@@ -955,28 +955,62 @@
 }
 
 .ias-icone {
+  position: relative;
   width: 72px;
   height: 72px;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.ias-icone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ias-icone::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    115deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #7c4dff,
+    #ff2d78
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: rainbow-shift 3s linear infinite;
+}
+
 .ias-icone:hover {
   transform: translateY(-8px) scale(1.1);
-  box-shadow: 0 20px 40px rgba(139, 47, 206, 0.4),
-    0 0 0 3px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.ias-icone:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 640px) {
   .ias-icone {
     width: 60px;
     height: 60px;
-    font-size: 1.6rem;
     border-radius: 16px;
   }
 }
