@@ -3,18 +3,18 @@
 // artigo inteiro. Categorias seguem as 8 trilhas reais da dev club.
 export const POSTS = [
   {
-    slug: "exemplo-html-css",
+    slug: "html-guia-completo",
     categoria: "HTML & CSS",
-    titulo: "[Título do post — exemplo]",
+    titulo: "HTML: o guia completo para iniciantes em desenvolvimento web",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Um guia introdutório de HTML pra quem tá começando: estrutura básica de um documento, tags de cabeçalho e parágrafo, listas, links e imagens — com exemplo de código pra cada elemento.",
   },
   {
-    slug: "exemplo-javascript",
+    slug: "babel-vs-swc-vs-esbuild",
     categoria: "JavaScript",
-    titulo: "[Título do post — exemplo]",
+    titulo: "Babel vs SWC vs ESBuild: otimizando o build de aplicações JavaScript",
     resumo:
-      "[Resumo curto do post — 2 ou 3 frases sobre o que ele ensina ou aborda]",
+      "Comparação técnica entre as três principais ferramentas de build do ecossistema JS — performance, compatibilidade e quando faz sentido usar cada uma em projetos modernos.",
   },
   {
     slug: "exemplo-react",
