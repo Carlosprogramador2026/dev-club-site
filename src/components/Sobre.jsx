@@ -1,4 +1,5 @@
 import Reveal from "./Reveal"
+import { asset } from "../utils/asset"
 
 export default function Sobre() {
   return (
@@ -30,7 +31,7 @@ export default function Sobre() {
             </div>
 
             <img
-              src="/foto-empresa.jpg"
+              src={asset("foto-empresa.jpg")}
               alt="Equipe da dev club"
               className="sobre-foto"
             />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { CURSOS } from "../data/cursos"
+import { asset } from "../utils/asset"
 
 const OBSERVED_IDS = ["cursos", "sobre", "depoimentos"]
 
@@ -34,7 +35,7 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container navbar-inner">
         <Link to="/#top" className="logo">
-          <img src="/logo.png" alt="" className="logo-icon" />
+          <img src={asset("logo.png")} alt="" className="logo-icon" />
           dev<span className="gradient-text">club</span>
         </Link>
 

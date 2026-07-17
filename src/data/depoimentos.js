@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset"
+
 // Depoimentos reais de alunos da dev club.
 export const DEPOIMENTOS = [
   {
@@ -7,9 +9,9 @@ export const DEPOIMENTOS = [
     texto:
       "Hoje sou um dos responsáveis pelo chatbot da Unimed Ceará, integrado com a OpenAI. Consegui a vaga num processo interno concorrido, colocando em prática tudo que aprendi na dev club — com mentoria de perto e suporte de verdade durante o caminho.",
     data: "Primeiro emprego como programador em junho de 2023",
-    foto: "/aristoteles-aguiar.png",
+    foto: asset("aristoteles-aguiar.png"),
     videoId: null,
-    videoSrc: "/video-depoimento-aristoteles.mp4",
+    videoSrc: asset("video-depoimento-aristoteles.mp4"),
   },
   {
     slug: "raphael-oliveira",
@@ -18,7 +20,7 @@ export const DEPOIMENTOS = [
     texto:
       "Depois de mais de 20 anos como vendedor, decidi recomeçar do zero. Peguei um primeiro trabalho freelance, foi bem, e veio o tão esperado \"sim\". Mais que um curso, foi a virada de chave da minha vida.",
     data: "Primeiro emprego como programador em maio de 2023",
-    foto: "/raphael-bonadia.png",
+    foto: asset("raphael-bonadia.png"),
     videoId: "Hp7u0gJzkfY",
   },
   {
@@ -28,9 +30,9 @@ export const DEPOIMENTOS = [
     texto:
       "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a dev club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
     data: "Primeiro emprego como programadora",
-    foto: "/vanessa-lebrao.png",
+    foto: asset("vanessa-lebrao.png"),
     videoId: null,
-    videoSrc: "/video-depoimento-vanessa.mp4",
+    videoSrc: asset("video-depoimento-vanessa.mp4"),
   },
 ]
 
