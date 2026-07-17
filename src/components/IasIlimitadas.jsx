@@ -16,16 +16,16 @@ export default function IasIlimitadas() {
   return (
     <section id="ias-ilimitadas">
       <div className="container">
-        <span className="section-tag">IAs ilimitadas</span>
+        <span className="section-tag">Inteligência artificial</span>
         <h2 className="section-title">
-          Modelos <span className="gradient-text">realmente ilimitados</span>,
-          <br />
-          sem créditos, sem travas
+          Domine as{" "}
+          <span className="gradient-text">Inteligências Artificiais</span>{" "}
+          que estão transformando o mercado
         </h2>
         <p className="section-subtitle">
-          Na dev club, você tem acesso a todos os principais modelos de IA de
-          forma ilimitada — sem precisar comprar créditos, e seu chat nunca
-          trava no meio da conversa.
+          Aprenda a utilizar as principais plataformas de Inteligência
+          Artificial para acelerar seu aprendizado, desenvolver projetos com
+          mais eficiência e aumentar sua produtividade como desenvolvedor.
         </p>
 
         <Reveal>
@@ -42,6 +42,16 @@ export default function IasIlimitadas() {
             ))}
           </div>
         </Reveal>
+
+        <a
+          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+          style={{ marginTop: 40 }}
+        >
+          Quero Aprender I.A.
+        </a>
       </div>
     </section>
   )
