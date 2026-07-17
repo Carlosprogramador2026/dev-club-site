@@ -360,7 +360,11 @@
 }
 
 .curso-card::after,
-.depoimento-card::after {
+.depoimento-card::after,
+.diferencial-card::after,
+.curso-modulo-card::after,
+.curso-publico-card::after,
+.curso-instrutor-card::after {
   content: "";
   position: absolute;
   inset: -2px;
@@ -389,7 +393,11 @@
 }
 
 .curso-card:hover::after,
-.depoimento-card:hover::after {
+.depoimento-card:hover::after,
+.diferencial-card:hover::after,
+.curso-modulo-card:hover::after,
+.curso-publico-card:hover::after,
+.curso-instrutor-card:hover::after {
   opacity: 1;
 }
 
@@ -766,10 +774,18 @@
 }
 
 .diferencial-card {
+  position: relative;
   background: var(--bg-alt);
   border: 1px dashed rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
   padding: 28px 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.diferencial-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
 .diferencial-card h3 {
@@ -1062,6 +1078,7 @@
 }
 
 .curso-modulo-card {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -1069,6 +1086,13 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 20px 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.curso-modulo-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
 .curso-modulo-numero {
@@ -1102,10 +1126,18 @@
 }
 
 .curso-publico-card {
+  position: relative;
   background: var(--bg-alt);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 22px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.curso-publico-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
 .curso-publico-card h3 {
@@ -1128,28 +1160,47 @@
 
 /* Instrutor */
 .curso-instrutor-card {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
   background: var(--bg-alt);
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 24px;
   margin-bottom: 56px;
   max-width: 620px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.curso-instrutor-avatar {
+.curso-instrutor-card:hover {
+  border-color: transparent;
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+.curso-instrutor-avatar,
+.curso-instrutor-foto {
   flex-shrink: 0;
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  object-fit: cover;
   background: linear-gradient(135deg, var(--bg), var(--bg-alt));
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .curso-instrutor-card strong {
   display: block;
+  margin-bottom: 4px;
+}
+
+.curso-instrutor-cargo {
+  display: block;
+  color: var(--purple);
+  font-size: 0.85rem;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
@@ -1294,6 +1345,9 @@
 }
 
 .footer-col a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-dim);
   font-size: 0.88rem;
   transition: color 0.2s ease;
@@ -1301,6 +1355,30 @@
 
 .footer-col a:hover {
   color: var(--purple);
+}
+
+.contato-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.contato-icone--email {
+  background: linear-gradient(135deg, var(--purple), var(--olive));
+}
+
+.contato-icone--whatsapp {
+  background: #25d366;
+}
+
+.contato-icone--instagram {
+  background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
 }
 
 .footer-placeholder {

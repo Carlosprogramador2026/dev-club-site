@@ -1,3 +1,17 @@
+import { asset } from "../utils/asset"
+
+const RODOLFO = {
+  nome: "Rodolfo Mori",
+  cargo: "Fundador e professor da dev club",
+  foto: asset("rodolfo.jpg"),
+}
+
+const MATEUS = {
+  nome: "Mateus Nogueira",
+  cargo: "Professor de I.A.",
+  foto: asset("mateus-nogueira.png"),
+}
+
 export const CURSOS = [
   {
     slug: "html-css",
@@ -15,6 +29,10 @@ export const CURSOS = [
     ],
     temVideo: true,
     videoId: "C03GzXuzWCA",
+    instrutor: {
+      ...RODOLFO,
+      bio: "Fundador e professor da dev club, também assina essa trilha de fundamentos — a mesma base de front-end que aplica no dia a dia construindo interfaces com React, Angular e Svelte.",
+    },
   },
   {
     slug: "javascript",
@@ -32,6 +50,10 @@ export const CURSOS = [
     ],
     temVideo: true,
     videoId: "UVLT52VcRkY",
+    instrutor: {
+      ...RODOLFO,
+      bio: "Conduz essa trilha de lógica e JavaScript moderno aplicando a mesma linguagem que usa em produção, tanto no front-end quanto no back-end com Node.js.",
+    },
   },
   {
     slug: "react",
@@ -49,6 +71,10 @@ export const CURSOS = [
     ],
     temVideo: true,
     videoId: "hHcaVgoLLQM",
+    instrutor: {
+      ...RODOLFO,
+      bio: "React é uma das tecnologias que usa no dia a dia em projetos reais, ao lado de Angular, Svelte e TypeScript — e é quem assina essa trilha.",
+    },
   },
   {
     slug: "sistemas-web",
@@ -66,6 +92,10 @@ export const CURSOS = [
     ],
     temVideo: true,
     videoId: "PiSgMhtPH_Y",
+    instrutor: {
+      ...RODOLFO,
+      bio: "Orienta essa trilha prática, guiando a construção de sistemas completos de ponta a ponta com a mesma stack full stack que usa em produção.",
+    },
   },
   {
     slug: "node-backend",
@@ -82,6 +112,10 @@ export const CURSOS = [
       "Testes automatizados e organização de projeto",
     ],
     temVideo: false,
+    instrutor: {
+      ...RODOLFO,
+      bio: "Professor dessa trilha de back-end, com experiência real em Node.js, NestJS e bancos de dados relacionais e não relacionais.",
+    },
   },
   {
     slug: "cloud-devops",
@@ -98,6 +132,10 @@ export const CURSOS = [
       "Boas práticas de segurança e escalabilidade",
     ],
     temVideo: false,
+    instrutor: {
+      ...RODOLFO,
+      bio: "Conduz essa trilha de cloud com experiência prática em AWS (API Gateway, Lambda, S3, entre outros) e monitoramento com Kibana e Grafana.",
+    },
   },
   {
     slug: "mobile",
@@ -114,6 +152,10 @@ export const CURSOS = [
       "Boas práticas de performance mobile",
     ],
     temVideo: false,
+    instrutor: {
+      ...RODOLFO,
+      bio: "Orienta essa trilha de mobile aplicando a mesma base de React que usa no dia a dia pra construir interfaces, agora no ambiente mobile com React Native.",
+    },
   },
   {
     slug: "ia-automacao",
@@ -130,6 +172,10 @@ export const CURSOS = [
       "Boas práticas e limites do uso de IA em produção",
     ],
     temVideo: false,
+    instrutor: {
+      ...MATEUS,
+      bio: "Especialista em como agentes de inteligência artificial são projetados e usados na prática — é quem assina essa trilha.",
+    },
   },
 ]
 

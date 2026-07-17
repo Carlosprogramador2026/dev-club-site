@@ -65,12 +65,25 @@ export default function CursoPage() {
 
         <h2 className="curso-section-title">Instrutor</h2>
         <div className="curso-instrutor-card">
-          <div className="curso-instrutor-avatar" aria-hidden="true" />
+          {curso.instrutor ? (
+            <img
+              src={curso.instrutor.foto}
+              alt={curso.instrutor.nome}
+              className="curso-instrutor-foto"
+            />
+          ) : (
+            <div className="curso-instrutor-avatar" aria-hidden="true" />
+          )}
           <div>
-            <strong>Instrutor a definir</strong>
+            <strong>{curso.instrutor?.nome ?? "Instrutor a definir"}</strong>
+            {curso.instrutor && (
+              <span className="curso-instrutor-cargo">
+                {curso.instrutor.cargo}
+              </span>
+            )}
             <p>
-              Essa trilha ainda não tem instrutor confirmado publicamente —
-              assim que a dev club definir, entra aqui foto, nome e bio.
+              {curso.instrutor?.bio ??
+                "Essa trilha ainda não tem instrutor confirmado publicamente — assim que a dev club definir, entra aqui foto, nome e bio."}
             </p>
           </div>
         </div>

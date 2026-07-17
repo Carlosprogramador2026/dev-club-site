@@ -32,21 +32,30 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contato</h4>
           <a href="mailto:contato@rodolfomori.com">
-            <span aria-hidden="true">📧</span> contato@rodolfomori.com
+            <span className="contato-icone contato-icone--email" aria-hidden="true">
+              📧
+            </span>
+            contato@rodolfomori.com
           </a>
           <a
             href="https://wa.me/5511951957674"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span aria-hidden="true">💬</span> WhatsApp
+            <span className="contato-icone contato-icone--whatsapp" aria-hidden="true">
+              💬
+            </span>
+            WhatsApp
           </a>
           <a
             href="https://www.instagram.com/devclubescola?igsh=MXEwZHpvZnIybWJ6dg=="
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span aria-hidden="true">📷</span> Instagram
+            <span className="contato-icone contato-icone--instagram" aria-hidden="true">
+              📷
+            </span>
+            Instagram
           </a>
         </div>
 
