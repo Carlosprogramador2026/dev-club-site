@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom"
 import { CURSOS } from "../data/cursos"
+import {
+  EmailIcon,
+  InstagramIcon,
+  WhatsappIcon,
+  GithubIcon,
+  LinkedinIcon,
+} from "./Icons"
 
 export default function Footer() {
   return (
@@ -33,7 +40,7 @@ export default function Footer() {
           <h4>Contato</h4>
           <a href="mailto:contato@rodolfomori.com">
             <span className="contato-icone contato-icone--email" aria-hidden="true">
-              📧
+              <EmailIcon />
             </span>
             contato@rodolfomori.com
           </a>
@@ -43,7 +50,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <span className="contato-icone contato-icone--whatsapp" aria-hidden="true">
-              💬
+              <WhatsappIcon />
             </span>
             WhatsApp
           </a>
@@ -53,7 +60,7 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             <span className="contato-icone contato-icone--instagram" aria-hidden="true">
-              📷
+              <InstagramIcon />
             </span>
             Instagram
           </a>
@@ -83,6 +90,37 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>&copy; {new Date().getFullYear()} dev club. Todos os direitos reservados.</p>
+
+        <div className="footer-dev-credit">
+          <span>Site desenvolvido por Carlos</span>
+          <a
+            href="https://github.com/Carlosprogramador2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de Carlos"
+            className="footer-dev-icone"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/carlos-alberto-sanches-bonito-a9023a3ba?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Carlos"
+            className="footer-dev-icone"
+          >
+            <LinkedinIcon />
+          </a>
+          <a
+            href="https://wa.me/5519992352168"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp de Carlos"
+            className="footer-dev-icone"
+          >
+            <WhatsappIcon />
+          </a>
+        </div>
       </div>
     </footer>
   )

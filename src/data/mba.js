@@ -4,17 +4,17 @@ export const MBA_MENTORES = [
   {
     nome: "Rodolfo Mori",
     cargo: "Embaixador OpenAI (ChatGPT) no Brasil",
-    foto: asset("rodolfo.jpg"),
+    foto: asset("rodolfo-mba.png"),
   },
   {
     nome: "Arnobio Morelix",
     cargo: "Senior Advisor",
-    foto: null,
+    foto: asset("arnobio-morelix.png"),
   },
   {
     nome: "Marcelo Henrique Ferro",
     cargo: "Business Analyst em IA no Nubank",
-    foto: null,
+    foto: asset("marcelo-henrique-ferro.png"),
   },
 ]
 

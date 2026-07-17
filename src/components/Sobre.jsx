@@ -12,21 +12,44 @@ export default function Sobre() {
           <div className="sobre-row">
             <div className="sobre-content">
               <p>
-                A dev club é uma escola de programação focada em formar
-                desenvolvedores Full Stack — HTML, CSS, JavaScript e React —
-                do zero até a primeira vaga de emprego. O aprendizado é
-                prático desde os primeiros módulos: você constrói aplicações
-                reais, não fica só assistindo aula.
+                Fundada em <strong>2020</strong>, a <strong>DevClub</strong> é
+                uma escola de programação que nasceu com a missão de
+                democratizar o acesso à tecnologia e preparar profissionais
+                para o mercado de desenvolvimento de software. Ao longo dos
+                anos, tornou-se uma das principais referências em formação de
+                desenvolvedores no Brasil, conectando ensino prático às
+                necessidades reais das empresas.
               </p>
               <p>
-                Por trás dos cursos tem uma equipe de mais de 100
-                profissionais, diretos e indiretos, acompanhando cada etapa
-                — não é conteúdo gravado sem suporte: tem mentoria, suporte
-                de verdade durante a jornada, e uma
-                comunidade ativa pra trocar conhecimento e fazer network. O
-                foco é sempre o mesmo: portfólio real e preparação pra
-                entrevista técnica, pra você conseguir a oportunidade em
-                tech.
+                Especializada na formação de desenvolvedores{" "}
+                <strong>Full Stack</strong>, a DevClub ensina{" "}
+                <strong>HTML, CSS, JavaScript, React</strong> e outras
+                tecnologias essenciais, levando o aluno do zero até a
+                preparação para conquistar sua primeira oportunidade na área.
+                Desde os primeiros módulos, o aprendizado é baseado em
+                projetos reais, permitindo que cada estudante desenvolva um
+                portfólio sólido e adquira experiência prática.
+              </p>
+              <p>
+                Por trás dos cursos existe uma equipe com mais de{" "}
+                <strong>100 profissionais</strong>, diretos e indiretos, que
+                acompanha a jornada dos alunos por meio de mentorias, suporte
+                especializado e uma comunidade ativa para networking, troca
+                de conhecimento e desenvolvimento profissional.
+              </p>
+              <p>
+                Mais do que ensinar programação, a DevClub proporciona um
+                caminho completo para quem deseja construir uma carreira em
+                tecnologia. Sua metodologia prepara os alunos para os
+                desafios do mercado, com foco em resolução de problemas,
+                entrevistas técnicas e desenvolvimento de competências
+                valorizadas pelas empresas.
+              </p>
+              <p>
+                Hoje, a DevClub representa inovação, oportunidade e
+                transformação de vidas, formando profissionais qualificados e
+                contribuindo para o crescimento do mercado de tecnologia no
+                Brasil.
               </p>
             </div>
 

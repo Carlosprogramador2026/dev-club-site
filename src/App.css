@@ -806,6 +806,123 @@
   }
 }
 
+/* Mercado */
+.mercado-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.mercado-salarios {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mercado-salario-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mercado-salario-nivel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mercado-salario-barra {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mercado-salario-barra--1 {
+  background: rgba(255, 255, 255, 0.08);
+  width: 55%;
+}
+
+.mercado-salario-barra--2 {
+  background: linear-gradient(90deg, var(--purple), #6228d7);
+  width: 75%;
+}
+
+.mercado-salario-barra--3 {
+  background: linear-gradient(90deg, var(--purple), var(--olive));
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .mercado-salario-barra--1,
+  .mercado-salario-barra--2,
+  .mercado-salario-barra--3 {
+    width: 100%;
+  }
+}
+
+.mercado-fonte {
+  margin: 8px 0 0;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+.mercado-beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mercado-beneficio-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.mercado-beneficio-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--olive));
+  color: #fff;
+}
+
+.mercado-beneficio-icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mercado-beneficio-item strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.mercado-beneficio-item p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .mercado-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* Depoimentos */
 .depoimentos-grid {
   display: grid;
@@ -1009,7 +1126,7 @@
 .mba-mentores {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 32px;
   margin-bottom: 56px;
 }
 
@@ -1017,7 +1134,15 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 200px;
+  width: 280px;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .mba-mentor-card {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 .mba-mentor-foto {
@@ -1514,12 +1639,16 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  font-size: 0.9rem;
-  line-height: 1;
+  color: #fff;
+}
+
+.contato-icone svg {
+  width: 15px;
+  height: 15px;
 }
 
 .contato-icone--email {
-  background: linear-gradient(135deg, var(--purple), var(--olive));
+  background: #ea4335;
 }
 
 .contato-icone--whatsapp {
@@ -1537,6 +1666,11 @@
 }
 
 .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px 0;
 }
@@ -1545,6 +1679,36 @@
   color: var(--text-dim);
   font-size: 0.85rem;
   margin: 0;
+}
+
+.footer-dev-credit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+.footer-dev-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-dim);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-dev-icone svg {
+  width: 14px;
+  height: 14px;
+}
+
+.footer-dev-icone:hover {
+  color: var(--purple);
+  border-color: var(--purple);
 }
 
 @media (max-width: 900px) {
