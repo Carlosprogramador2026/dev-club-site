@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <span className="logo">
-            dev<span className="gradient-text">club</span>
+            DEV <span className="gradient-text">CLUB</span>
           </span>
           <p>Formação em tecnologia do zero à primeira vaga.</p>
         </div>

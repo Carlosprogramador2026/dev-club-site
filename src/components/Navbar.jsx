@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="container navbar-inner">
         <Link to="/#top" className="logo">
           <img src={asset("logo.png")} alt="" className="logo-icon" />
-          dev<span className="gradient-text">club</span>
+          DEV <span className="gradient-text">CLUB</span>
         </Link>
 
         <nav className="nav-links">
