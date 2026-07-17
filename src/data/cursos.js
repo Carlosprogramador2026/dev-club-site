@@ -111,7 +111,7 @@ export const CURSOS = [
       "Autenticação, filas e boas práticas de arquitetura",
       "Testes automatizados e organização de projeto",
     ],
-    temVideo: false,
+    temVideo: true,
     instrutor: {
       ...RODOLFO,
       bio: "Professor dessa trilha de back-end, com experiência real em Node.js, NestJS e bancos de dados relacionais e não relacionais.",
@@ -131,7 +131,7 @@ export const CURSOS = [
       "Monitoramento com Kibana e Grafana",
       "Boas práticas de segurança e escalabilidade",
     ],
-    temVideo: false,
+    temVideo: true,
     instrutor: {
       ...RODOLFO,
       bio: "Conduz essa trilha de cloud com experiência prática em AWS (API Gateway, Lambda, S3, entre outros) e monitoramento com Kibana e Grafana.",
@@ -151,7 +151,7 @@ export const CURSOS = [
       "Publicação nas lojas Android e iOS",
       "Boas práticas de performance mobile",
     ],
-    temVideo: false,
+    temVideo: true,
     instrutor: {
       ...RODOLFO,
       bio: "Orienta essa trilha de mobile aplicando a mesma base de React que usa no dia a dia pra construir interfaces, agora no ambiente mobile com React Native.",
@@ -171,7 +171,7 @@ export const CURSOS = [
       "Uso de IA pra produtividade e atendimento",
       "Boas práticas e limites do uso de IA em produção",
     ],
-    temVideo: false,
+    temVideo: true,
     instrutor: {
       ...MATEUS,
       bio: "Especialista em como agentes de inteligência artificial são projetados e usados na prática — é quem assina essa trilha.",

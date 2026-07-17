@@ -91,9 +91,14 @@ export default function CursoPage() {
         <h2 className="curso-section-title">Perguntas frequentes</h2>
         <FaqAccordion items={FAQ_CURSO} />
 
-        <Link to="/#cta" className="btn btn-primary curso-cta">
+        <a
+          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary curso-cta"
+        >
           Quero fazer esse curso
-        </Link>
+        </a>
       </div>
     </section>
   )

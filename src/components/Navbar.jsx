@@ -90,7 +90,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="https://www.devclub.com.br/"
+          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary nav-cta"
