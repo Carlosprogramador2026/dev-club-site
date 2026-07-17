@@ -1006,6 +1006,155 @@
   }
 }
 
+.mba-mentores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.mba-mentor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 200px;
+}
+
+.mba-mentor-foto {
+  width: 100%;
+  aspect-ratio: 3 / 3.5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  filter: grayscale(1);
+  transition: filter 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.mba-mentor-avatar {
+  background: linear-gradient(135deg, var(--bg), var(--bg-alt));
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.mba-mentor-card:hover .mba-mentor-foto {
+  filter: grayscale(0);
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(139, 47, 206, 0.25), 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+.mba-mentor-card strong {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.mba-mentor-card span {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.mba-investimento {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  margin-bottom: 56px;
+  align-items: stretch;
+}
+
+.mba-investimento-beneficios {
+  background: var(--bg-alt);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mba-investimento-beneficios p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  display: flex;
+  gap: 10px;
+}
+
+.mba-investimento-beneficios p span {
+  color: var(--olive);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mba-investimento-preco {
+  background: linear-gradient(160deg, rgba(139, 47, 206, 0.18), var(--bg-alt) 55%);
+  border: 1px solid rgba(139, 47, 206, 0.35);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.mba-investimento-bolsas {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--purple), var(--olive));
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.mba-investimento-de {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
+.mba-investimento-parcela {
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, var(--purple), var(--olive));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mba-investimento-avista {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.mba-investimento-pagamento {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  margin-bottom: 16px;
+}
+
+.mba-investimento-preco .btn {
+  width: 100%;
+}
+
+.mba-investimento-seguro {
+  margin-top: 12px;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .mba-investimento {
+    grid-template-columns: 1fr;
+  }
+}
+
 .curso-back {
   display: inline-block;
   color: var(--text-dim);

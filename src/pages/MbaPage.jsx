@@ -1,5 +1,12 @@
 import { Link } from "react-router-dom"
-import { MBA_BENEFICIOS, MBA_TRIMESTRES, MBA_PUBLICO, MBA_FAQ } from "../data/mba"
+import {
+  MBA_MENTORES,
+  MBA_INVESTIMENTO,
+  MBA_BENEFICIOS,
+  MBA_TRIMESTRES,
+  MBA_PUBLICO,
+  MBA_FAQ,
+} from "../data/mba"
 import FaqAccordion from "../components/FaqAccordion"
 
 const TYPEFORM_URL =
@@ -25,6 +32,21 @@ export default function MbaPage() {
           Brasil, e outros profissionais da área.
         </p>
 
+        <h2 className="curso-section-title">Quem vai te ensinar</h2>
+        <div className="mba-mentores">
+          {MBA_MENTORES.map((m) => (
+            <div key={m.nome} className="mba-mentor-card">
+              {m.foto ? (
+                <img src={m.foto} alt={m.nome} className="mba-mentor-foto" />
+              ) : (
+                <div className="mba-mentor-foto mba-mentor-avatar" aria-hidden="true" />
+              )}
+              <strong>{m.nome}</strong>
+              <span>{m.cargo}</span>
+            </div>
+          ))}
+        </div>
+
         <div className="mba-beneficios">
           {MBA_BENEFICIOS.map((b) => (
             <div key={b.titulo} className="diferencial-card">
@@ -34,7 +56,7 @@ export default function MbaPage() {
           ))}
         </div>
 
-        <h2 className="curso-section-title">Estrutura do curso (12 meses)</h2>
+        <h2 className="curso-section-title">Estrutura do curso (18 meses)</h2>
         <div className="curso-modulos-grid">
           {MBA_TRIMESTRES.map((t, i) => (
             <div key={t.titulo} className="curso-modulo-card">
@@ -59,6 +81,46 @@ export default function MbaPage() {
               <p>{p.desc}</p>
             </div>
           ))}
+        </div>
+
+        <h2 className="curso-section-title">{MBA_INVESTIMENTO.titulo}</h2>
+        <p className="section-subtitle" style={{ marginBottom: 24 }}>
+          {MBA_INVESTIMENTO.subtitulo}
+        </p>
+        <div className="mba-investimento">
+          <div className="mba-investimento-beneficios">
+            {MBA_INVESTIMENTO.beneficios.map((b) => (
+              <p key={b}>
+                <span aria-hidden="true">✓</span> {b}
+              </p>
+            ))}
+          </div>
+          <div className="mba-investimento-preco">
+            <span className="mba-investimento-bolsas">
+              {MBA_INVESTIMENTO.bolsas}
+            </span>
+            <p className="mba-investimento-de">
+              De {MBA_INVESTIMENTO.precoDe} por apenas:
+            </p>
+            <strong className="mba-investimento-parcela">
+              {MBA_INVESTIMENTO.parcelas}
+            </strong>
+            <span className="mba-investimento-avista">
+              {MBA_INVESTIMENTO.avista}
+            </span>
+            <span className="mba-investimento-pagamento">
+              {MBA_INVESTIMENTO.pagamento}
+            </span>
+            <a
+              href={TYPEFORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              Quero garantir minha pré-matrícula
+            </a>
+            <span className="mba-investimento-seguro">🔒 Compra segura</span>
+          </div>
         </div>
 
         <h2 className="curso-section-title">Perguntas frequentes</h2>

@@ -35,7 +35,7 @@ export default function BlogPage() {
           rel="noopener noreferrer"
           className="btn btn-primary curso-cta"
         >
-          Ver blog completo
+          Quero conhecer devclub
         </a>
       </div>
     </section>

@@ -63,7 +63,7 @@ export default function Footer() {
           <h4>Newsletter</h4>
           <p>Receba novidades da dev club no seu e-mail.</p>
           <form
-            action="https://www.devclub.com.br/newsletter"
+            action="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
             target="_blank"
             className="footer-newsletter-form"
           >

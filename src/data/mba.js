@@ -1,3 +1,44 @@
+import { asset } from "../utils/asset"
+
+export const MBA_MENTORES = [
+  {
+    nome: "Rodolfo Mori",
+    cargo: "Embaixador OpenAI (ChatGPT) no Brasil",
+    foto: asset("rodolfo.jpg"),
+  },
+  {
+    nome: "Arnobio Morelix",
+    cargo: "Senior Advisor",
+    foto: null,
+  },
+  {
+    nome: "Marcelo Henrique Ferro",
+    cargo: "Business Analyst em IA no Nubank",
+    foto: null,
+  },
+]
+
+export const MBA_INVESTIMENTO = {
+  titulo: "O investimento pra entrar na 1ª turma do MBA em IA",
+  subtitulo: "São mais de R$ 4.000 em desconto pela bolsa de estudos.",
+  beneficios: [
+    "Certificado de MBA em IA e Automação de Negócios (MEC)",
+    "18 meses de formação completa + acesso ao ClubHub",
+    "Mais de R$ 27 mil em ferramentas de IA e tecnologia",
+    "Certificações Harvard, MIT, Stanford, IBM, AWS, Google, Meta",
+    "Preparação completa pra carreira internacional",
+    "Pack de 10 agentes de IA + playbook de agência",
+    "Mentorias 1:1 com especialistas e recrutadora",
+    "Bootcamp e sprint prática de produtos",
+    "Suporte técnico e comunidade exclusiva",
+  ],
+  bolsas: "40 bolsas disponíveis",
+  precoDe: "R$ 6.997",
+  parcelas: "18x de R$ 199,00",
+  avista: "ou R$ 2.997 à vista",
+  pagamento: "Pagamento por cartão ou PIX",
+}
+
 export const MBA_BENEFICIOS = [
   {
     titulo: "Diploma reconhecido pelo MEC",
