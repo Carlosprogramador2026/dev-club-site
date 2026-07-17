@@ -1,7 +1,7 @@
 export const DIFERENCIAIS_TITULO = "Por que escolher a dev club"
 
 export const DIFERENCIAIS_SUBTITULO =
-  "O que separa a dev club de curso gravado e largado por aí."
+  "O que separa a dev club de um curso gravado sem acompanhamento."
 
 export const DIFERENCIAIS = [
   {
@@ -22,7 +22,7 @@ export const DIFERENCIAIS = [
   },
   {
     titulo: "Mentoria e suporte de verdade",
-    desc: "Acompanhamento durante toda a jornada, não é aula gravada e largada — tem gente de verdade te guiando.",
+    desc: "Acompanhamento durante toda a jornada — não é aula gravada sem suporte, tem gente de verdade te guiando.",
   },
   {
     titulo: "Preparação pra entrevista técnica",

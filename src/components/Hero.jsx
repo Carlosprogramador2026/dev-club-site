@@ -1,5 +1,12 @@
 import ParticleField from "./ParticleField"
 import Counter from "./Counter"
+import { asset } from "../utils/asset"
+
+const ALUNOS_FOTOS = [
+  { src: asset("aristoteles-aguiar.png"), alt: "Aristoteles Aguiar" },
+  { src: asset("raphael-bonadia.png"), alt: "Raphael Bonadia de Oliveira" },
+  { src: asset("vanessa-lebrao.png"), alt: "Vanessa Lebrão Quintilhano" },
+]
 
 export default function Hero() {
   return (
@@ -33,6 +40,20 @@ export default function Hero() {
             <a href="#cursos" className="btn btn-ghost">
               Ver cursos
             </a>
+          </div>
+
+          <div className="hero-alunos">
+            <div className="hero-alunos-fotos">
+              {ALUNOS_FOTOS.map((aluno) => (
+                <img key={aluno.alt} src={aluno.src} alt={aluno.alt} />
+              ))}
+              <span className="hero-alunos-mais">+</span>
+            </div>
+            <p>
+              +25 mil alunos e alunas no Brasil e no mundo.
+              <br />
+              Junte-se a eles.
+            </p>
           </div>
 
           <div className="hero-stats">

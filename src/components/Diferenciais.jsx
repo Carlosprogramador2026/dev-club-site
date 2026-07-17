@@ -9,7 +9,7 @@ export default function Diferenciais() {
   return (
     <section id="diferenciais">
       <div className="container">
-        <span className="section-tag">Diferenciais [exemplo]</span>
+        <span className="section-tag">Diferenciais</span>
         <h2 className="section-title">{DIFERENCIAIS_TITULO}</h2>
         <p className="section-subtitle">{DIFERENCIAIS_SUBTITULO}</p>
 

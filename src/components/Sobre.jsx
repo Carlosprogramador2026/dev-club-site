@@ -21,8 +21,8 @@ export default function Sobre() {
               <p>
                 Por trás dos cursos tem uma equipe de mais de 100
                 profissionais, diretos e indiretos, acompanhando cada etapa
-                — não é conteúdo gravado e largado:
-                tem mentoria, suporte de verdade durante a jornada, e uma
+                — não é conteúdo gravado sem suporte: tem mentoria, suporte
+                de verdade durante a jornada, e uma
                 comunidade ativa pra trocar conhecimento e fazer network. O
                 foco é sempre o mesmo: portfólio real e preparação pra
                 entrevista técnica, pra você conseguir a oportunidade em
