@@ -14,34 +14,34 @@ const LETTER_Y_RATIO = 0.22
 const SETTLE_RATE = 0.06
 const RELAUNCH_CHANCE = 0.00008
 const ARRIVE_DISTANCE = 8
-const MAX_ROTATION = 0.24
-const MAX_SKEW = 0.36
-const TILT_EASE = 0.035
 const SPARK_RADIUS = 170
 const SPARK_CHANCE = 0.6
 const SPARK_LIFE = 55
 const SPIN_DURATION = 100
+const MOBILE_BREAKPOINT = 640
 
 function hexToRgb(hex) {
   const value = parseInt(hex.slice(1), 16)
   return `${(value >> 16) & 255}, ${(value >> 8) & 255}, ${value & 255}`
 }
 
-function fitFontSize(ctx, text, width, height) {
-  const maxWidth = width * 0.82
-  const maxHeight = height * 0.4
+function fitFontSize(ctx, text, width, height, isMobile) {
+  const maxWidth = width * (isMobile ? 0.68 : 0.82)
+  const maxHeight = isMobile
+    ? Math.min(height * 0.2, width * 0.85)
+    : height * 0.4
   ctx.font = `800 ${maxHeight}px "Segoe UI", system-ui, sans-serif`
   const textWidth = ctx.measureText(text).width
   return textWidth > maxWidth ? maxHeight * (maxWidth / textWidth) : maxHeight
 }
 
-function sampleLetterPoints(width, height) {
+function sampleLetterPoints(width, height, isMobile) {
   const off = document.createElement("canvas")
   off.width = width
   off.height = height
   const octx = off.getContext("2d")
 
-  const fontSize = fitFontSize(octx, LETTERS, width, height)
+  const fontSize = fitFontSize(octx, LETTERS, width, height, isMobile)
   octx.font = `800 ${fontSize}px "Segoe UI", system-ui, sans-serif`
   octx.textAlign = "center"
   octx.textBaseline = "middle"
@@ -144,13 +144,13 @@ export default function ParticleField() {
     let spinDirection = 1
     let wasNear = false
     const mouse = { x: -99999, y: -99999 }
-    const tilt = { rotation: 0, skewX: 0, skewY: 0 }
 
     function resize() {
       width = canvas.width = canvas.offsetWidth * dpr
       height = canvas.height = canvas.offsetHeight * dpr
+      const isMobile = canvas.offsetWidth < MOBILE_BREAKPOINT
 
-      const points = sampleLetterPoints(width, height)
+      const points = sampleLetterPoints(width, height, isMobile)
       particles = points.map((pt) =>
         createParticle(pt, width, height, PALETTES[paletteIndex])
       )
@@ -226,17 +226,6 @@ export default function ParticleField() {
       const cx = width / 2
       const cy = height * LETTER_Y_RATIO
 
-      let nx = 0
-      let ny = 0
-      if (mouse.x > -10000) {
-        nx = Math.max(-1, Math.min(1, (mouse.x - cx) / (width * 0.5)))
-        ny = Math.max(-1, Math.min(1, (mouse.y - cy) / (height * 0.6)))
-      }
-
-      tilt.rotation += (nx * MAX_ROTATION - tilt.rotation) * TILT_EASE
-      tilt.skewX += (nx * MAX_SKEW - tilt.skewX) * TILT_EASE
-      tilt.skewY += (ny * MAX_SKEW - tilt.skewY) * TILT_EASE
-
       const mouseNearLetter =
         mouse.x > -10000 && Math.hypot(mouse.x - cx, mouse.y - cy) < width * 0.4
 
@@ -265,8 +254,7 @@ export default function ParticleField() {
 
       ctx.save()
       ctx.translate(cx, cy)
-      ctx.rotate(tilt.rotation + spinAngle)
-      ctx.transform(1, tilt.skewY, tilt.skewX, 1, 0, 0)
+      ctx.rotate(spinAngle)
       ctx.translate(-cx, -cy)
 
       for (const p of particles) {
