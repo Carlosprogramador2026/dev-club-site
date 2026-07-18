@@ -13,6 +13,8 @@ export default function Cursos() {
         <p className="section-subtitle">
           Cada curso foi desenhado pra resolver o gargalo real de quem quer
           entrar em tech: prática, portfólio e direção.
+          <br />
+          <span className="scroll-hint">← arraste pra ver todas as trilhas →</span>
         </p>
 
         <div className="cursos-grid">

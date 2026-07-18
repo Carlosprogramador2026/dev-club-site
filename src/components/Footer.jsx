@@ -17,6 +17,22 @@ export default function Footer() {
             DEV <span className="gradient-text">CLUB</span>
           </span>
           <p>Formação em tecnologia do zero à primeira vaga.</p>
+
+          <p className="footer-institucional">
+            CNPJ 35.775.053/0001-69
+            <br />
+            Al. Rio Negro, 503 - Conj 2301 - Alphaville Industrial
+            <br />
+            Barueri - SP, 06454-000
+          </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Al.+Rio+Negro%2C+503+-+Conj+2301+-+Alphaville+Industrial%2C+Barueri+-+SP%2C+06454-000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-map-link"
+          >
+            📍 Ver no mapa
+          </a>
         </div>
 
         <div className="footer-col">

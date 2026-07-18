@@ -335,9 +335,33 @@
 
 /* Cursos */
 .cursos-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: 0 -24px;
+  padding: 4px 24px 20px;
+  scrollbar-color: var(--neon) rgba(255, 255, 255, 0.06);
+}
+
+.cursos-grid > .reveal {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+}
+
+.cursos-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cursos-grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+}
+
+.cursos-grid::-webkit-scrollbar-thumb {
+  background: var(--neon);
+  opacity: 0.5;
+  border-radius: 999px;
 }
 
 .curso-card {
@@ -355,7 +379,8 @@
 
 .curso-card:hover {
   border-color: transparent;
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.03) perspective(800px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
@@ -433,14 +458,19 @@
 }
 
 @media (max-width: 980px) {
-  .cursos-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .cursos-grid > .reveal {
+    flex-basis: 240px;
   }
 }
 
 @media (max-width: 560px) {
   .cursos-grid {
-    grid-template-columns: 1fr;
+    margin: 0 -16px;
+    padding: 4px 16px 20px;
+  }
+
+  .cursos-grid > .reveal {
+    flex-basis: 78vw;
   }
 }
 
@@ -487,6 +517,69 @@
   margin: 0;
 }
 
+/* CEO */
+.ceo-row {
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.ceo-video-frame {
+  position: relative;
+  flex: 1 1 560px;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(0, 255, 163, 0.25);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 255, 163, 0.12);
+}
+
+.ceo-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.ceo-texto {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ceo-texto strong {
+  font-size: 1.3rem;
+}
+
+.ceo-cargo {
+  color: var(--neon);
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+.ceo-texto p {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+@media (max-width: 900px) {
+  .ceo-row {
+    flex-direction: column;
+  }
+
+  .ceo-video-frame {
+    max-width: 100%;
+  }
+}
+
 /* Equipe */
 .fundador-card {
   position: relative;
@@ -504,7 +597,8 @@
 
 .fundador-card:hover {
   border-color: transparent;
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px) scale(1.02) perspective(800px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
@@ -610,7 +704,8 @@
 
 .equipe-card:hover {
   border-color: transparent;
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.03) perspective(800px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
@@ -737,7 +832,8 @@
 
 .blog-card:hover {
   border-color: transparent;
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.03) perspective(800px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
@@ -1040,7 +1136,8 @@
 
 .depoimento-card:hover {
   border-color: transparent;
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-8px) scale(1.03) perspective(800px)
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
 }
 
@@ -1739,6 +1836,26 @@
   font-size: 0.85rem;
   margin: 0;
   max-width: 240px;
+}
+
+.footer-institucional {
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.footer-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  color: var(--neon);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-map-link:hover {
+  opacity: 0.75;
 }
 
 .footer-col {
