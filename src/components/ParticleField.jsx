@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react"
 
 const PALETTES = [
-  ["#8b2fce"],
+  ["#00ffa3"],
+  ["#39ff88"],
   ["#1e88ff"],
   ["#ffd700"],
   ["#ff3b3b"],
-  ["#00ffa3"],
 ]
 const MAX_PARTICLES = 5000
 const AMBIENT_DENSITY = 0.00022

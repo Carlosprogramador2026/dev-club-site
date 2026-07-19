@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom"
 import { CURSOS } from "../data/cursos"
-import Reveal from "./Reveal"
+
+function CursoCard({ curso }) {
+  return (
+    <Link to={`/cursos/${curso.slug}`} className="curso-card">
+      <span className="curso-tag">{curso.tag}</span>
+      <h3>{curso.title}</h3>
+      <p>{curso.desc}</p>
+    </Link>
+  )
+}
 
 export default function Cursos() {
   return (
@@ -13,19 +22,16 @@ export default function Cursos() {
         <p className="section-subtitle">
           Cada curso foi desenhado pra resolver o gargalo real de quem quer
           entrar em tech: prática, portfólio e direção.
-          <br />
-          <span className="scroll-hint">← arraste pra ver todas as trilhas →</span>
         </p>
+      </div>
 
-        <div className="cursos-grid">
-          {CURSOS.map((curso, i) => (
-            <Reveal key={curso.slug} delay={i * 80}>
-              <Link to={`/cursos/${curso.slug}`} className="curso-card">
-                <span className="curso-tag">{curso.tag}</span>
-                <h3>{curso.title}</h3>
-                <p>{curso.desc}</p>
-              </Link>
-            </Reveal>
+      <div className="cursos-marquee">
+        <div className="cursos-marquee-track">
+          {CURSOS.map((curso) => (
+            <CursoCard key={curso.slug} curso={curso} />
+          ))}
+          {CURSOS.map((curso) => (
+            <CursoCard key={`${curso.slug}-dup`} curso={curso} />
           ))}
         </div>
       </div>
