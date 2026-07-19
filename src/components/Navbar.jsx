@@ -138,9 +138,9 @@ export default function Navbar() {
               href="https://aulas.devclub.com.br/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-login-link"
+              className="btn btn-primary nav-cta"
             >
-              Já sou aluno — Login
+              Login
             </a>
             <a
               href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
@@ -154,34 +154,14 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-cta-group nav-cta-group--desktop">
-          <div className="nav-dropdown nav-login-dropdown">
-            <button
-              type="button"
-              className="nav-login-trigger"
-              aria-label="Menu de acesso do aluno"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" strokeWidth="1.6" />
-                <path
-                  d="M4 20c1.6-4 5-6 8-6s6.4 2 8 6"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-            <div className="nav-dropdown-menu nav-login-menu">
-              <a
-                href="https://aulas.devclub.com.br/login"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <strong>Login</strong>
-                <span>Acessar a plataforma de alunos</span>
-              </a>
-            </div>
-          </div>
+          <a
+            href="https://aulas.devclub.com.br/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary nav-cta"
+          >
+            Login
+          </a>
 
           <a
             href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
