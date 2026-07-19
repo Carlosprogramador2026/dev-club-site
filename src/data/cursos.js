@@ -112,7 +112,7 @@ export const CURSOS = [
       "Testes automatizados e organização de projeto",
     ],
     temVideo: true,
-    videoId: "CtBoYh959t8",
+    videoId: "4l4hoRlukVo",
     instrutor: {
       ...RODOLFO,
       bio: "Professor dessa trilha de back-end, com experiência real em Node.js, NestJS e bancos de dados relacionais e não relacionais.",
@@ -154,7 +154,7 @@ export const CURSOS = [
       "Boas práticas de performance mobile",
     ],
     temVideo: true,
-    videoId: "wLHOCB2U2BY",
+    videoId: "a8YvzTXft9c",
     instrutor: {
       ...RODOLFO,
       bio: "Orienta essa trilha de mobile aplicando a mesma base de React que usa no dia a dia pra construir interfaces, agora no ambiente mobile com React Native.",
