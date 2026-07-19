@@ -1227,11 +1227,11 @@
 /* Notebook digitando codigo (Tecnologias + CTA roxo) */
 .notebook-stage {
   position: relative;
-  height: 380px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  padding-top: 56px;
 }
 
 .notebook {
