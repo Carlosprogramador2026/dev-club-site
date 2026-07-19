@@ -38,4 +38,24 @@ export const EQUIPE = [
     foto: asset("mateus-nogueira.png"),
     bio: "Especialista em inteligência artificial aplicada, com foco em como agentes de IA são projetados e usados na prática — de prompts pontuais a sistemas mais autônomos. Ajuda alunos da dev club a entender e aplicar IA de forma real no dia a dia de desenvolvimento.",
   },
+  {
+    nome: "Em breve",
+    cargo: "Novo integrante da equipe",
+    foto: null,
+  },
+  {
+    nome: "Em breve",
+    cargo: "Novo integrante da equipe",
+    foto: null,
+  },
+  {
+    nome: "Em breve",
+    cargo: "Novo integrante da equipe",
+    foto: null,
+  },
+  {
+    nome: "Em breve",
+    cargo: "Novo integrante da equipe",
+    foto: null,
+  },
 ]
