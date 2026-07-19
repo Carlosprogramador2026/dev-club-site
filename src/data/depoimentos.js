@@ -146,54 +146,6 @@ export const DEPOIMENTOS = [
     foto: asset("thiago-zambrin.png"),
     videoId: "iva-R6gDvC8",
   },
-  {
-    slug: "ronald-andrade",
-    nome: "Ronald Andrade",
-    tag: "Em transição de carreira",
-    texto:
-      "Tenho 25 anos e estou em fase de transição de carreira, vindo da área de informática rumo ao desenvolvimento Web.",
-    historiaTitulo: "Sobre",
-    historia:
-      "Tenho 25 anos e me encontro em fase de transição de carreira. Venho da área de informática e estou em busca de uma oportunidade em desenvolvimento Web ou Programação. Estou cursando uma formação de programadores, a dev club, e nela venho me desenvolvendo em tecnologias como HTML, CSS e JavaScript. Estou aberto a oportunidades, colaborações e trocas de conhecimento que possam acelerar minha evolução na área.",
-    foto: asset("ronald-andrade.jpeg"),
-    videoId: null,
-  },
-  {
-    slug: "juliana-nunes",
-    nome: "Juliana Nunes",
-    tag: "Recursos Humanos",
-    texto:
-      "15 anos de experiência em Recursos Humanos, com forte expertise em Recrutamento & Seleção, Atração e Retenção de Talentos.",
-    historiaTitulo: "Sobre",
-    historia:
-      "Profissional com 15 anos de experiência na área de Recursos Humanos, com atuação generalista e forte expertise em Recrutamento & Seleção, Atração e Retenção de Talentos. Tenho vivência na estruturação e implantação de processos seletivos, condução de entrevistas por competências, alinhamento de perfil com gestores e acompanhamento de indicadores estratégicos de R&S, garantindo assertividade nas contratações e eficiência nos prazos (SLAs).\n\nAo longo da minha trajetória, também contribuí em Treinamento & Desenvolvimento, Avaliação de Desempenho (feedbacks e PDIs), Pesquisa de Clima e Programas de Carreira, sempre com foco no desenvolvimento de pessoas e fortalecimento da cultura organizacional.\n\nSou apaixonada pela gestão de pessoas e desenvolvimento de talentos, e sigo constantemente me aprimorando em Gestão de Recursos Humanos, Análise Comportamental e Gestão por Competências. Tenho como marca pessoal a facilidade de adaptação, empatia, dinamismo e foco em resultados, atuando de forma estratégica e consultiva junto a líderes e diretorias.\n\nHoje, sigo com o mesmo brilho nos olhos para conectar pessoas a oportunidades, desenvolver talentos e fortalecer equipes.",
-    foto: asset("juliana-nunes.jpeg"),
-    videoId: null,
-  },
-  {
-    slug: "gabriel-pimenta",
-    nome: "Gabriel Pimenta",
-    tag: "🚀 Desenvolvedor Full Stack",
-    texto:
-      "Desenvolvedor apaixonado por criar interfaces modernas e automações inteligentes que otimizam o dia a dia de pessoas e empresas.",
-    historiaTitulo: "Sobre",
-    historia:
-      "Sou um desenvolvedor apaixonado por criar interfaces modernas e automações inteligentes que otimizam o dia a dia de pessoas e empresas. Tenho experiência prática com HTML, CSS, TailwindCSS, JavaScript, TypeScript, React, Next.js, Node.js, n8n e Git, aplicando esses conhecimentos em projetos reais com foco em performance, escalabilidade e resultados concretos.\n\nJá desenvolvi automações e integrações com n8n que reduziram o tempo de tarefas manuais e aumentaram a eficiência de fluxos de trabalho. Valorizo código limpo, boas práticas e aprendizado contínuo — busco sempre evoluir criando soluções que geram impacto real e contribuem com o crescimento de empresas e times.",
-    foto: asset("gabriel-pimenta.jpeg"),
-    videoId: null,
-  },
-  {
-    slug: "adriano-coutinho",
-    nome: "Adriano Coutinho",
-    tag: "Técnico em Informática",
-    texto:
-      "Trajetória sólida desde 2006 que une manutenção de hardware e redes à paixão pelo desenvolvimento de software.",
-    historiaTitulo: "Sobre",
-    historia:
-      "Sou Técnico em Informática com registro ativo (CRT) e uma trajetória sólida desde 2006 que une manutenção de hardware e redes à paixão pelo desenvolvimento de software. Nos últimos 5 anos, venho atuando como desenvolvedor web, dominando PHP, HTML e CSS, com experiência prática em frontend e backend.\n\nNos últimos 2 anos, meu foco se consolidou no desenvolvimento OutSystems, onde já entreguei projetos autorais e soluções para clientes, como um sistema SaaS em PHP e um sistema de gestão documental para uma assessoria de imigração em Portugal, totalmente desenvolvido em OutSystems e em funcionamento.\n\nAmo tecnologia e códigos, e estou sempre buscando aprender, especialmente no universo da Inteligência Artificial, estudando suas linguagens e aplicabilidades. Minha abordagem é orientada à resolução de problemas de forma simples e eficaz, mantendo sempre a mente aberta para feedbacks e aprendizado contínuo.\n\nAtualmente, busco oportunidades como desenvolvedor OutSystems, onde posso aplicar meu conhecimento híbrido em frontend e backend para criar soluções robustas e escaláveis, ao mesmo tempo que permaneço aberto a desafios em outras linguagens.",
-    foto: asset("adriano-coutinho.jpeg"),
-    videoId: null,
-  },
 ]
 
 // Depoimentos de alunos que fecharam freelas pela dev club — aguardando
