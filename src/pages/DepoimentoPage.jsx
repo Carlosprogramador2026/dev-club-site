@@ -27,7 +27,9 @@ export default function DepoimentoPage() {
             <div className="depoimento-avatar depoimento-avatar-grande" aria-hidden="true" />
           )}
           <div>
-            <span className="section-tag">Antes: {depoimento.antes}</span>
+            <span className="section-tag">
+              {depoimento.tag || `Antes: ${depoimento.antes}`}
+            </span>
             <h1 className="section-title">{depoimento.nome}</h1>
           </div>
         </div>
@@ -35,22 +37,26 @@ export default function DepoimentoPage() {
         {depoimento.historia ? (
           <div className="depoimento-secoes">
             <div className="depoimento-secao">
-              <h3>História</h3>
+              <h3>{depoimento.historiaTitulo || "História"}</h3>
               <p>{depoimento.historia}</p>
             </div>
-            <div className="depoimento-secao">
-              <h3>Como conseguiu o primeiro emprego</h3>
-              <p>{depoimento.comoConseguiu}</p>
-            </div>
-            <div className="depoimento-secao">
-              <h3>Como o DevClub ajudou</h3>
-              <p>{depoimento.comoAjudou}</p>
-            </div>
+            {depoimento.comoConseguiu && (
+              <div className="depoimento-secao">
+                <h3>Como conseguiu o primeiro emprego</h3>
+                <p>{depoimento.comoConseguiu}</p>
+              </div>
+            )}
+            {depoimento.comoAjudou && (
+              <div className="depoimento-secao">
+                <h3>Como o DevClub ajudou</h3>
+                <p>{depoimento.comoAjudou}</p>
+              </div>
+            )}
           </div>
         ) : (
           <p className="section-subtitle">&ldquo;{depoimento.texto}&rdquo;</p>
         )}
-        <p className="depoimento-data">{depoimento.data}</p>
+        {depoimento.data && <p className="depoimento-data">{depoimento.data}</p>}
 
         {depoimento.videoId ? (
           <div className="curso-video curso-video-embed">

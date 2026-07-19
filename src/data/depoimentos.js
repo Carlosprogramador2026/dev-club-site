@@ -8,6 +8,12 @@ export const DEPOIMENTOS = [
     antes: "Assistente de Tecnologia",
     texto:
       "Hoje sou um dos responsáveis pelo chatbot da Unimed Ceará, integrado com a OpenAI. Consegui a vaga num processo interno concorrido, colocando em prática tudo que aprendi na dev club — com mentoria de perto e suporte de verdade durante o caminho.",
+    historia:
+      "Um dos responsáveis pelo desenvolvimento do Chatbot da Unimed Ceará e integrado com a OpenAI.",
+    comoConseguiu:
+      "Concorri a vaga em um processo interno bem concorrido, porém sai vitorioso graças a Deus e ao que aprendi no Dev Club.",
+    comoAjudou:
+      "Através de tudo o que vi, aprendi e que coloquei em prática que Rodolfo Mori ensinou, e através da mentoria da Rafa e lógico contando sempre com o apoio de todos dos sócios e do suporte magnífico da DevClub.",
     data: "Primeiro emprego como programador em junho de 2023",
     foto: asset("aristoteles-aguiar.png"),
     videoId: null,
@@ -19,6 +25,11 @@ export const DEPOIMENTOS = [
     antes: "Vendedor",
     texto:
       "Depois de mais de 20 anos como vendedor, decidi recomeçar do zero. Peguei um primeiro trabalho freelance, foi bem, e veio o tão esperado \"sim\". Mais que um curso, foi a virada de chave da minha vida.",
+    historia:
+      "Mais de 20 anos na área comercial, sendo vendedor por telefone (telemarketing). Sempre insatisfeito com a profissão, os ganhos não eram ruins, mas a saúde mental com a cobrança por metas começou a ir embora. Após um vídeo aleatório aparecer no YouTube, o vídeo que mudou tudo, fiz o curso de programação do zero. Depois, comprei o curso em abril do ano passado. Com as primeiras dificuldades, fui covarde e parei. Vi que minha vida continuou piorando e voltei pro curso.",
+    comoConseguiu:
+      "Em janeiro deste ano, recomecei do zero e não parei mais. Peguei um trabalho freelance, eles gostaram e veio o grande e esperado SIM.",
+    comoAjudou: "Em tudo, mais que um curso, foi a verdadeira virada de chave na minha vida.",
     data: "Primeiro emprego como programador em maio de 2023",
     foto: asset("raphael-bonadia.png"),
     videoId: "Hp7u0gJzkfY",
@@ -29,7 +40,13 @@ export const DEPOIMENTOS = [
     antes: "Veterinária",
     texto:
       "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a dev club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
-    data: "Primeiro emprego como programadora",
+    historia:
+      "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a dev club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
+    comoConseguiu:
+      "Me candidatei a uma vaga na empresa Zallpy Digital, mandei mensagem diretamente ao Tech Recruiter. Meu irmão presta serviço nessa empresa e comentei que tinha me interessado pela vaga, ele me indicou (depois de eu já ter aplicado e falado com o Tech Recruiter). Marcaram um bate-papo e era uma vaga de trainee.",
+    comoAjudou:
+      "TUDO. O DevClub me ajudou a elaborar um currículo que chamasse atenção dos recrutadores, um LinkedIn que chamasse atenção, como devo me comportar nas entrevistas, como devo abordar os recrutadores, e me ensinou que não existe almoço grátis. Fiz pelo menos umas 10 entrevistas nesse mês e em todas os ensinamentos do DevClub foram essenciais para que eu conseguisse meu primeiro sim.",
+    data: "Primeiro emprego como programadora em agosto de 2022",
     foto: asset("vanessa-lebrao.png"),
     videoId: null,
     videoSrc: asset("video-depoimento-vanessa.mp4"),
