@@ -9,7 +9,7 @@ const TOKENS = [
   "npm run build", "export const", "type Props = {", "interface User {",
 ]
 
-const MAX_LINES = 15
+const BUFFER_LINES = 40
 const MAX_LINE_LEN = 34
 
 function randomLine() {
@@ -31,7 +31,7 @@ const STATIC_LINES = [
 
 export default function NotebookCode() {
   const [completed, setCompleted] = useState(() =>
-    Array.from({ length: MAX_LINES - 1 }, randomLine)
+    Array.from({ length: BUFFER_LINES - 1 }, randomLine)
   )
   const [typing, setTyping] = useState("")
   const [reduceMotion, setReduceMotion] = useState(false)
@@ -49,22 +49,29 @@ export default function NotebookCode() {
       const next = TOKENS[Math.floor(Math.random() * TOKENS.length)]
       line = line ? `${line} ${next}` : next
       if (line.length > MAX_LINE_LEN) {
-        setCompleted((prev) => [...prev, line].slice(-MAX_LINES))
+        setCompleted((prev) => [...prev, line].slice(-BUFFER_LINES))
         setTyping("")
         line = ""
       } else {
         setTyping(line)
       }
-    }, 110)
+    }, 100)
 
     return () => clearInterval(id)
   }, [])
 
+  const lines = [...completed, typing]
+
   return (
-    <pre className="notebook-code">
-      {completed.map((l) => `${l}\n`).join("")}
-      {typing}
-      {!reduceMotion && <span className="notebook-cursor">▍</span>}
-    </pre>
+    <div className="notebook-code">
+      {lines.map((line, i) => (
+        <div key={i} className="notebook-code-line">
+          {line || " "}
+          {i === lines.length - 1 && !reduceMotion && (
+            <span className="notebook-cursor">▍</span>
+          )}
+        </div>
+      ))}
+    </div>
   )
 }

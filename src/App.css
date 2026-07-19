@@ -1394,13 +1394,21 @@
   position: absolute;
   inset: 0;
   margin: 0;
-  padding: 18px 18px 10px;
+  padding: 14px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
   font-family: "Courier New", monospace;
-  font-size: 0.72rem;
-  line-height: 1.45;
+  font-size: 0.62rem;
+  line-height: 1.35;
   color: rgba(0, 255, 163, 0.85);
-  white-space: pre-wrap;
-  word-break: break-all;
+  overflow: hidden;
+}
+
+.notebook-code-line {
+  flex-shrink: 0;
+  white-space: pre;
   overflow: hidden;
 }
 
