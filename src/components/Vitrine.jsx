@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom"
 import Reveal from "./Reveal"
+import { FREELA_DEPOIMENTOS } from "../data/depoimentos"
 
 export default function Vitrine() {
   return (
@@ -48,6 +50,35 @@ export default function Vitrine() {
             </div>
           </div>
         </Reveal>
+
+        <h3 className="vitrine-freelas-titulo">
+          Quem já ganhou dinheiro com freelas na dev club
+        </h3>
+
+        <div className="depoimentos-grid vitrine-freelas-grid">
+          {FREELA_DEPOIMENTOS.map((d, i) => (
+            <Reveal key={d.slug} delay={i * 80}>
+              <Link to={`/depoimentos/${d.slug}`} className="depoimento-card">
+                <div className="depoimento-topo">
+                  {d.foto ? (
+                    <img
+                      src={d.foto}
+                      alt={d.nome}
+                      className="depoimento-foto"
+                    />
+                  ) : (
+                    <div className="depoimento-avatar" aria-hidden="true" />
+                  )}
+                  <div>
+                    <strong>{d.nome}</strong>
+                    <span>{d.antes}</span>
+                  </div>
+                </div>
+                <p>&ldquo;{d.texto}&rdquo;</p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   )

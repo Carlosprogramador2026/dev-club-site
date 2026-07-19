@@ -96,6 +96,42 @@ export const DEPOIMENTOS = [
   },
 ]
 
+// Depoimentos de alunos que fecharam freelas pela dev club — aguardando
+// casos reais (nome, foto, quanto faturou, video) pra substituir os
+// placeholders "em breve".
+export const FREELA_DEPOIMENTOS = [
+  {
+    slug: "freela-1",
+    nome: "Em breve",
+    antes: "Freela fechado com a dev club",
+    texto: "Depoimento de freela em breve.",
+    data: "Em breve",
+    foto: null,
+    videoId: null,
+    videoSrc: null,
+  },
+  {
+    slug: "freela-2",
+    nome: "Em breve",
+    antes: "Freela fechado com a dev club",
+    texto: "Depoimento de freela em breve.",
+    data: "Em breve",
+    foto: null,
+    videoId: null,
+    videoSrc: null,
+  },
+  {
+    slug: "freela-3",
+    nome: "Em breve",
+    antes: "Freela fechado com a dev club",
+    texto: "Depoimento de freela em breve.",
+    data: "Em breve",
+    foto: null,
+    videoId: null,
+    videoSrc: null,
+  },
+]
+
 export function getDepoimentoBySlug(slug) {
-  return DEPOIMENTOS.find((d) => d.slug === slug)
+  return [...DEPOIMENTOS, ...FREELA_DEPOIMENTOS].find((d) => d.slug === slug)
 }

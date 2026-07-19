@@ -854,6 +854,16 @@
   max-width: 260px;
 }
 
+.vitrine-freelas-titulo {
+  font-size: 1.3rem;
+  margin: 56px 0 24px;
+  text-align: center;
+}
+
+.vitrine-freelas-grid {
+  margin-bottom: 0;
+}
+
 @keyframes vitrine-float {
   0%,
   100% {
