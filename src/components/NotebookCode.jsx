@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useMemo } from "react"
 
 const TOKENS = [
   "const", "function", "return", "if (", "} else {", "import", "export default",
@@ -9,7 +9,7 @@ const TOKENS = [
   "npm run build", "export const", "type Props = {", "interface User {",
 ]
 
-const BUFFER_LINES = 40
+const LINE_COUNT = 30
 const MAX_LINE_LEN = 34
 
 function randomLine() {
@@ -21,57 +21,23 @@ function randomLine() {
   return line
 }
 
-const STATIC_LINES = [
-  "const dev = new Programmer()",
-  "dev.learn('HTML', 'CSS', 'JS')",
-  "dev.learn('React', 'Node.js')",
-  "dev.buildPortfolio()",
-  "dev.conquerFirstJob()",
-]
-
 export default function NotebookCode() {
-  const [completed, setCompleted] = useState(() =>
-    Array.from({ length: BUFFER_LINES - 1 }, randomLine)
-  )
-  const [typing, setTyping] = useState("")
-  const [reduceMotion, setReduceMotion] = useState(false)
-
-  useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (reduce) {
-      setReduceMotion(true)
-      setCompleted(STATIC_LINES)
-      return
-    }
-
-    let line = ""
-    const id = setInterval(() => {
-      const next = TOKENS[Math.floor(Math.random() * TOKENS.length)]
-      line = line ? `${line} ${next}` : next
-      if (line.length > MAX_LINE_LEN) {
-        setCompleted((prev) => [...prev, line].slice(-BUFFER_LINES))
-        setTyping("")
-        line = ""
-      } else {
-        setTyping(line)
-      }
-    }, 100)
-
-    return () => clearInterval(id)
-  }, [])
-
-  const lines = [...completed, typing]
+  const lines = useMemo(() => Array.from({ length: LINE_COUNT }, randomLine), [])
 
   return (
-    <div className="notebook-code">
-      {lines.map((line, i) => (
-        <div key={i} className="notebook-code-line">
-          {line || " "}
-          {i === lines.length - 1 && !reduceMotion && (
-            <span className="notebook-cursor">▍</span>
-          )}
-        </div>
-      ))}
+    <div className="notebook-code" aria-hidden="true">
+      <div className="notebook-code-track">
+        {lines.map((line, i) => (
+          <div key={`a-${i}`} className="notebook-code-line">
+            {line}
+          </div>
+        ))}
+        {lines.map((line, i) => (
+          <div key={`b-${i}`} className="notebook-code-line">
+            {line}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
