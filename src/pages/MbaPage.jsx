@@ -8,6 +8,7 @@ import {
   MBA_FAQ,
 } from "../data/mba"
 import FaqAccordion from "../components/FaqAccordion"
+import MecBadge from "../components/MecBadge"
 
 const TYPEFORM_URL =
   "https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
@@ -31,6 +32,8 @@ export default function MbaPage() {
           mercado — ministrada por Rodolfo Mori, embaixador da OpenAI no
           Brasil, e outros profissionais da área.
         </p>
+
+        <MecBadge />
 
         <h2 className="curso-section-title">Quem vai te ensinar</h2>
         <div className="mba-mentores">
