@@ -113,24 +113,27 @@ export default function Navbar() {
           >
             Nossos Alunos
           </Link>
+        </nav>
 
+        <div className="nav-cta-group">
           <a
             href="https://aulas.devclub.com.br/login"
             target="_blank"
             rel="noopener noreferrer"
+            className="btn btn-primary nav-cta"
           >
             Login
           </a>
-        </nav>
 
-        <a
-          href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary nav-cta"
-        >
-          Matricule-se
-        </a>
+          <a
+            href="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary nav-cta"
+          >
+            Matricule-se
+          </a>
+        </div>
       </div>
     </header>
   )

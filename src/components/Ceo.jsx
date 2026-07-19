@@ -1,7 +1,7 @@
 import Reveal from "./Reveal"
 import { FUNDADOR } from "../data/equipe"
 
-const VIDEO_ID = "oZH9btcdYrE"
+const VIDEO_ID = "z5zt1vPnbM8"
 
 export default function Ceo() {
   return (

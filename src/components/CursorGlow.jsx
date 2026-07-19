@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react"
 
 const TILT_SELECTOR =
-  ".curso-card, .equipe-card, .depoimento-card, .blog-card, .fundador-card"
+  ".curso-card, .equipe-card, .depoimento-card, .blog-card, .fundador-card, " +
+  ".diferencial-card, .curso-modulo-card, .curso-publico-card, " +
+  ".curso-instrutor-card"
 
 export default function CursorGlow() {
   const glowRef = useRef(null)

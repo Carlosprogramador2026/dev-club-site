@@ -37,6 +37,15 @@ export default function Vitrine() {
               <strong>100%</strong>
               <span>no primeiro emprego em tech</span>
             </div>
+
+            <div className="vitrine-card vitrine-card--5">
+              <span className="vitrine-card-label">Freelas</span>
+              <strong>R$ 100 mil</strong>
+              <span>
+                faturados por alunos em 1 mês com freelas de sistemas, sites,
+                front-end e back-end
+              </span>
+            </div>
           </div>
         </Reveal>
       </div>
