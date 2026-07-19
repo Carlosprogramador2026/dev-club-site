@@ -1,30 +1,7 @@
-import { useRef } from "react"
 import { Link } from "react-router-dom"
 import { CURSOS } from "../data/cursos"
 
 export default function Cursos() {
-  const stageRef = useRef(null)
-  const trackRef = useRef(null)
-
-  function handleMove(e) {
-    const track = trackRef.current
-    const stage = stageRef.current
-    if (!track || !stage) return
-    const maxScroll = track.scrollWidth - stage.clientWidth
-    if (maxScroll <= 0) return
-    const rect = stage.getBoundingClientRect()
-    const percent = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width))
-    track.style.transition = "transform 0.1s linear"
-    track.style.transform = `translateX(-${percent * maxScroll}px)`
-  }
-
-  function handleLeave() {
-    const track = trackRef.current
-    if (!track) return
-    track.style.transition = "transform 0.5s ease"
-    track.style.transform = "translateX(0)"
-  }
-
   return (
     <section id="cursos">
       <div className="container">
@@ -38,16 +15,11 @@ export default function Cursos() {
         </p>
       </div>
 
-      <div
-        className="cursos-marquee"
-        ref={stageRef}
-        onMouseMove={handleMove}
-        onMouseLeave={handleLeave}
-      >
-        <div className="cursos-marquee-track" ref={trackRef}>
-          {CURSOS.map((curso) => (
+      <div className="cursos-marquee">
+        <div className="cursos-marquee-track">
+          {[...CURSOS, ...CURSOS].map((curso, i) => (
             <Link
-              key={curso.slug}
+              key={`${curso.slug}-${i}`}
               to={`/cursos/${curso.slug}`}
               className="curso-card"
             >

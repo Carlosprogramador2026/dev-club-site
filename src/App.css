@@ -370,6 +370,26 @@
   width: max-content;
   padding: 4px 24px 20px;
   will-change: transform;
+  animation: cursos-scroll 32s linear infinite;
+}
+
+.cursos-marquee:hover .cursos-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes cursos-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursos-marquee-track {
+    animation: none;
+  }
 }
 
 .cursos-marquee-track .curso-card {
@@ -396,6 +416,7 @@
 
   .cursos-marquee-track {
     transform: none !important;
+    animation: none;
   }
 }
 
@@ -1185,11 +1206,14 @@
   );
 }
 
-/* Arco brilhante compartilhado (Tecnologias + CTA roxo) */
+/* Notebook brilhante compartilhado (Tecnologias + CTA roxo) */
 .glow-arc-stage {
   position: relative;
-  height: 320px;
+  height: 380px;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .ambient-particles {
@@ -1200,22 +1224,86 @@
   pointer-events: none;
 }
 
-.glow-arc {
-  position: absolute;
-  bottom: -320px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 640px;
-  height: 640px;
-  max-width: 150vw;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
+.notebook {
+  position: relative;
+  z-index: 1;
+  width: min(620px, 88vw);
+  aspect-ratio: 16 / 11;
+  margin-bottom: 26px;
+}
+
+.notebook-screen {
+  position: relative;
+  width: 100%;
+  height: 84%;
+  border-radius: 16px 16px 5px 5px;
   border: 3px solid rgba(200, 160, 255, 0.9);
+  background: #05060a;
+  overflow: hidden;
   box-shadow:
     0 0 40px 12px rgba(200, 160, 255, 0.8),
     0 0 100px 50px rgba(124, 77, 255, 0.5),
     0 0 220px 120px rgba(98, 40, 215, 0.28);
   animation: glow-arc-breathe 5s ease-in-out infinite;
+}
+
+.notebook-cam {
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 255, 163, 0.7);
+  box-shadow: 0 0 6px 2px rgba(0, 255, 163, 0.6);
+  z-index: 2;
+}
+
+.notebook-code {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 26px 20px 14px;
+  font-family: "Courier New", monospace;
+  font-size: 0.74rem;
+  line-height: 1.55;
+  color: rgba(0, 255, 163, 0.85);
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.notebook-cursor {
+  color: rgba(200, 160, 255, 0.9);
+  animation: notebook-blink 1s step-end infinite;
+}
+
+@keyframes notebook-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.notebook-base {
+  position: relative;
+  width: 116%;
+  left: -8%;
+  height: 15%;
+  background: linear-gradient(180deg, rgba(70, 35, 115, 0.9), rgba(18, 9, 30, 0.95));
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+}
+
+.notebook-trackpad {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18%;
+  height: 5px;
+  background: rgba(200, 160, 255, 0.4);
+  border-radius: 0 0 6px 6px;
 }
 
 @keyframes glow-arc-breathe {
@@ -1302,7 +1390,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .glow-arc,
+  .notebook-screen,
+  .notebook-cursor,
   .glow-sparkle {
     animation: none;
   }
