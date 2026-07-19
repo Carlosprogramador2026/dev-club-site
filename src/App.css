@@ -536,13 +536,14 @@
 /* CEO */
 .ceo-row {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 40px;
 }
 
 .ceo-video-frame {
   position: relative;
   flex: 1 1 560px;
+  width: 100%;
   max-width: 640px;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
@@ -1167,18 +1168,6 @@
   );
 }
 
-.tecnologias-tag {
-  color: #a879ff;
-  text-shadow: 0 0 12px rgba(168, 121, 255, 0.5);
-}
-
-.tecnologias-gradient {
-  background: linear-gradient(90deg, #a879ff, #7c4dff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 /* Arco brilhante compartilhado (Tecnologias + CTA roxo) */
 .glow-arc-stage {
   position: relative;
@@ -1293,7 +1282,7 @@
   }
 }
 
-/* CTA roxo final — arco brilhante + texto embaralhado */
+/* CTA roxo final — fundo de codigo vazado + arco brilhante */
 .cta-roxo {
   position: relative;
   overflow: hidden;
@@ -1301,24 +1290,41 @@
   background: #0a0512;
 }
 
+.code-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Courier New", monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: rgba(168, 121, 255, 0.16);
+  white-space: pre;
+  text-align: center;
+  pointer-events: none;
+  padding: 24px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 40%,
+    transparent 85%
+  );
+  mask-image: radial-gradient(ellipse at center, #000 40%, transparent 85%);
+}
+
+.cta-roxo .glow-arc-stage {
+  position: relative;
+  z-index: 1;
+}
+
 .cta-roxo-content {
   position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
   padding-top: 24px;
-}
-
-.cta-roxo-code {
-  display: block;
-  font-family: "Courier New", monospace;
-  font-size: clamp(1.3rem, 4vw, 2.1rem);
-  font-weight: 700;
-  color: #e9d9ff;
-  text-shadow: 0 0 16px rgba(200, 160, 255, 0.7);
-  letter-spacing: 0.02em;
-  min-height: 1.4em;
 }
 
 .cta-roxo-btn {
