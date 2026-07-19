@@ -1358,14 +1358,14 @@
   position: relative;
   z-index: 1;
   width: min(620px, 88vw);
-  aspect-ratio: 16 / 11;
   margin-bottom: 26px;
 }
 
 .notebook-screen {
   position: relative;
   width: 100%;
-  height: 84%;
+  aspect-ratio: 16 / 9.2;
+  min-height: 160px;
   border-radius: 16px 16px 5px 5px;
   border: 3px solid rgba(200, 160, 255, 0.9);
   background: #05060a;
@@ -1419,7 +1419,7 @@
   position: relative;
   width: 116%;
   left: -8%;
-  height: 15%;
+  height: clamp(28px, 9vw, 56px);
   background: linear-gradient(180deg, rgba(70, 35, 115, 0.9), rgba(18, 9, 30, 0.95));
   border-radius: 0 0 12px 12px;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
