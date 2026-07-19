@@ -1522,6 +1522,26 @@
   margin-top: 24px;
 }
 
+.depoimento-secoes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+.depoimento-secao h3 {
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+  color: var(--neon);
+}
+
+.depoimento-secao p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
 .depoimento-header {
   display: flex;
   align-items: center;

@@ -32,7 +32,24 @@ export default function DepoimentoPage() {
           </div>
         </div>
 
-        <p className="section-subtitle">&ldquo;{depoimento.texto}&rdquo;</p>
+        {depoimento.historia ? (
+          <div className="depoimento-secoes">
+            <div className="depoimento-secao">
+              <h3>História</h3>
+              <p>{depoimento.historia}</p>
+            </div>
+            <div className="depoimento-secao">
+              <h3>Como conseguiu o primeiro emprego</h3>
+              <p>{depoimento.comoConseguiu}</p>
+            </div>
+            <div className="depoimento-secao">
+              <h3>Como o DevClub ajudou</h3>
+              <p>{depoimento.comoAjudou}</p>
+            </div>
+          </div>
+        ) : (
+          <p className="section-subtitle">&ldquo;{depoimento.texto}&rdquo;</p>
+        )}
         <p className="depoimento-data">{depoimento.data}</p>
 
         {depoimento.videoId ? (
