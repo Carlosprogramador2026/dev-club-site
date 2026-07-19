@@ -9,21 +9,38 @@ const TOKENS = [
   "npm run build", "export const", "type Props = {", "interface User {",
 ]
 
-const MAX_LINES = 10
+const MAX_LINES = 15
 const MAX_LINE_LEN = 34
 
+function randomLine() {
+  let line = ""
+  while (line.length < MAX_LINE_LEN - 10) {
+    const next = TOKENS[Math.floor(Math.random() * TOKENS.length)]
+    line = line ? `${line} ${next}` : next
+  }
+  return line
+}
+
+const STATIC_LINES = [
+  "const dev = new Programmer()",
+  "dev.learn('HTML', 'CSS', 'JS')",
+  "dev.learn('React', 'Node.js')",
+  "dev.buildPortfolio()",
+  "dev.conquerFirstJob()",
+]
+
 export default function NotebookCode() {
-  const [completed, setCompleted] = useState([])
+  const [completed, setCompleted] = useState(() =>
+    Array.from({ length: MAX_LINES - 1 }, randomLine)
+  )
   const [typing, setTyping] = useState("")
+  const [reduceMotion, setReduceMotion] = useState(false)
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (reduce) {
-      setCompleted([
-        "const dev = new Programmer()",
-        "dev.learn('React', 'Node.js')",
-        "dev.conquerFirstJob()",
-      ])
+      setReduceMotion(true)
+      setCompleted(STATIC_LINES)
       return
     }
 
@@ -38,7 +55,7 @@ export default function NotebookCode() {
       } else {
         setTyping(line)
       }
-    }, 130)
+    }, 110)
 
     return () => clearInterval(id)
   }, [])
@@ -47,7 +64,7 @@ export default function NotebookCode() {
     <pre className="notebook-code">
       {completed.map((l) => `${l}\n`).join("")}
       {typing}
-      <span className="notebook-cursor">▍</span>
+      {!reduceMotion && <span className="notebook-cursor">▍</span>}
     </pre>
   )
 }

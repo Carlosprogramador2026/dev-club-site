@@ -25,7 +25,7 @@ export default function Depoimentos() {
                   )}
                   <div>
                     <strong>{d.nome}</strong>
-                    <span>Antes: {d.antes}</span>
+                    <span>{d.tag || `Antes: ${d.antes}`}</span>
                   </div>
                 </div>
                 <p>&ldquo;{d.texto}&rdquo;</p>

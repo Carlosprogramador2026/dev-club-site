@@ -1206,14 +1206,11 @@
   );
 }
 
-/* Notebook brilhante compartilhado (Tecnologias + CTA roxo) */
+/* Arco brilhante (Tecnologias) */
 .glow-arc-stage {
   position: relative;
-  height: 380px;
+  height: 320px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
 }
 
 .ambient-particles {
@@ -1222,6 +1219,44 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+
+.glow-arc {
+  position: absolute;
+  bottom: -320px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640px;
+  height: 640px;
+  max-width: 150vw;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 3px solid rgba(200, 160, 255, 0.9);
+  box-shadow:
+    0 0 40px 12px rgba(200, 160, 255, 0.8),
+    0 0 100px 50px rgba(124, 77, 255, 0.5),
+    0 0 220px 120px rgba(98, 40, 215, 0.28);
+  animation: glow-arc-breathe 5s ease-in-out infinite;
+}
+
+@keyframes glow-arc-breathe {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Notebook digitando codigo (CTA roxo) */
+.notebook-stage {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .notebook {
@@ -1264,10 +1299,10 @@
   position: absolute;
   inset: 0;
   margin: 0;
-  padding: 26px 20px 14px;
+  padding: 18px 18px 10px;
   font-family: "Courier New", monospace;
-  font-size: 0.74rem;
-  line-height: 1.55;
+  font-size: 0.72rem;
+  line-height: 1.45;
   color: rgba(0, 255, 163, 0.85);
   white-space: pre-wrap;
   word-break: break-all;
@@ -1304,16 +1339,6 @@
   height: 5px;
   background: rgba(200, 160, 255, 0.4);
   border-radius: 0 0 6px 6px;
-}
-
-@keyframes glow-arc-breathe {
-  0%,
-  100% {
-    opacity: 0.85;
-  }
-  50% {
-    opacity: 1;
-  }
 }
 
 .glow-sparkle {
@@ -1390,6 +1415,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .glow-arc,
   .notebook-screen,
   .notebook-cursor,
   .glow-sparkle {
@@ -1420,7 +1446,7 @@
   padding: 24px;
 }
 
-.cta-roxo .glow-arc-stage {
+.cta-roxo .notebook-stage {
   position: relative;
   z-index: 1;
 }
@@ -1634,6 +1660,7 @@
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
+  white-space: pre-line;
 }
 
 .depoimento-header {
