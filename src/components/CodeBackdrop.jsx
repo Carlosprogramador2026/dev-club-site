@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react"
 
 const CHARS = "01</>{}#$%&*+=~;:_"
-const COLS = 64
-const ROWS = 16
+const COLS = 70
+const ROWS = 26
 
 function randomLine() {
   let out = ""

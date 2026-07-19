@@ -1287,7 +1287,6 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  background: #0a0512;
 }
 
 .code-backdrop {
@@ -1297,19 +1296,13 @@
   margin: 0;
   overflow: hidden;
   font-family: "Courier New", monospace;
-  font-size: 0.78rem;
-  line-height: 1.7;
-  color: rgba(168, 121, 255, 0.16);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(180, 130, 255, 0.28);
   white-space: pre;
   text-align: center;
   pointer-events: none;
   padding: 24px;
-  -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    #000 40%,
-    transparent 85%
-  );
-  mask-image: radial-gradient(ellipse at center, #000 40%, transparent 85%);
 }
 
 .cta-roxo .glow-arc-stage {
