@@ -19,7 +19,14 @@ export default function Depoimentos() {
               <Link to={`/depoimentos/${d.slug}`} className="depoimento-card">
                 <div className="depoimento-topo">
                   {d.foto ? (
-                    <img src={d.foto} alt={d.nome} className="depoimento-foto" />
+                    <span className="depoimento-card-avatar-wrap">
+                      <img src={d.foto} alt={d.nome} className="depoimento-foto" />
+                      {(d.videoId || d.videoSrc) && (
+                        <span className="depoimento-card-play-badge" aria-hidden="true">
+                          ▶
+                        </span>
+                      )}
+                    </span>
                   ) : (
                     <div className="depoimento-avatar" aria-hidden="true" />
                   )}
