@@ -4,6 +4,11 @@ export const FUNDADOR = {
   nome: "Rodolfo Mori",
   cargo: "Fundador e CEO da dev club",
   foto: asset("rodolfo.jpg"),
+  bioResumo: [
+    "Rodolfo Mori é desenvolvedor de software, empreendedor e fundador da dev club, uma escola especializada na formação de desenvolvedores pro mercado de tecnologia. Com experiência em desenvolvimento de software e educação tecnológica, dedica a carreira a ensinar programação de forma prática, acessível e alinhada com o que as empresas precisam.",
+    "A metodologia da dev club prioriza projetos reais, construção de portfólio, resolução de problemas e preparação pra processos seletivos — aproximando o aprendizado da rotina de um desenvolvedor profissional.",
+    "Hoje a dev club mantém uma comunidade ativa de estudantes e profissionais que trocam conhecimento, experiência e oportunidades de crescimento.",
+  ],
   bio: [
     "Rodolfo Mori nasceu e cresceu na periferia de São Paulo, estudou em escola pública e começou a trabalhar ainda jovem. Antes de entrar pra tecnologia, foi eletricista no Metrô de São Paulo — uma profissão estável, mas distante do futuro que ele queria construir pra si e pra família.",
     "Foi em meio a dificuldades pessoais e financeiras que descobriu a programação. Sem faculdade na área e sem experiência prévia, estudou sozinho durante noites, fins de semana e feriados, encaixando os estudos entre um turno de trabalho e outro.",

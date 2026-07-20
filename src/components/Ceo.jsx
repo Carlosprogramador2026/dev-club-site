@@ -27,7 +27,7 @@ export default function Ceo() {
             <div className="ceo-texto">
               <strong>{FUNDADOR.nome}</strong>
               <span className="ceo-cargo">{FUNDADOR.cargo}</span>
-              {FUNDADOR.bio.map((paragrafo) => (
+              {FUNDADOR.bioResumo.map((paragrafo) => (
                 <p key={paragrafo.slice(0, 24)}>{paragrafo}</p>
               ))}
             </div>
