@@ -1046,6 +1046,7 @@
 }
 
 .depoimento-card-body strong {
+  display: block;
   font-size: 0.95rem;
 }
 
