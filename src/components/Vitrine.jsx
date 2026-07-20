@@ -63,16 +63,19 @@ export default function Vitrine() {
                 className="depoimento-card depoimento-card--video"
               >
                 {d.videoSrc ? (
-                  <video
-                    src={d.videoSrc}
-                    poster={d.foto || undefined}
-                    className="depoimento-card-video"
-                    muted
-                    loop
-                    autoPlay
-                    playsInline
-                    preload="metadata"
-                  />
+                  <div className="depoimento-card-video-wrap">
+                    <video
+                      src={d.videoSrc}
+                      poster={d.foto || undefined}
+                      className="depoimento-card-video"
+                      muted
+                      playsInline
+                      preload="none"
+                    />
+                    <span className="depoimento-card-play" aria-hidden="true">
+                      ▶
+                    </span>
+                  </div>
                 ) : d.foto ? (
                   <img
                     src={d.foto}

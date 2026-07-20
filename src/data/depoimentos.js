@@ -188,7 +188,7 @@ export const DEPOIMENTOS = [
 // Depoimentos de alunos que fecharam freelas pela dev club — aguardando mais
 // casos reais (nome, foto, quanto faturou, video) pra substituir os
 // placeholders "em breve" restantes.
-export const FREELA_DEPOIMENTOS = [SYLVANA_RIBEIRO, ADRIANO_COUTINHO, CARLOS_BONITO]
+export const FREELA_DEPOIMENTOS = [ADRIANO_COUTINHO, SYLVANA_RIBEIRO, CARLOS_BONITO]
 
 export function getDepoimentoBySlug(slug) {
   return [...DEPOIMENTOS, ...FREELA_DEPOIMENTOS].find((d) => d.slug === slug)

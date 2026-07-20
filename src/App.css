@@ -991,6 +991,11 @@
   overflow: hidden;
 }
 
+.depoimento-card-video-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
 .depoimento-card-video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -998,6 +1003,23 @@
   display: block;
   background: #000;
   flex-shrink: 0;
+}
+
+.depoimento-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--verde2), var(--olive));
+  color: #0a0710;
+  font-size: 1.2rem;
+  box-shadow: 0 0 32px rgba(0, 200, 120, 0.4);
 }
 
 .depoimento-card-body {
