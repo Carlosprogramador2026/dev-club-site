@@ -991,11 +991,6 @@
   overflow: hidden;
 }
 
-.depoimento-card-video-wrap {
-  position: relative;
-  flex-shrink: 0;
-}
-
 .depoimento-card-video {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -1005,21 +1000,42 @@
   flex-shrink: 0;
 }
 
-.depoimento-card-play {
+.depoimento-card-avatar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.depoimento-card-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  display: block;
+}
+
+.depoimento-card-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: block;
+}
+
+.depoimento-card-play-badge {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 56px;
-  height: 56px;
+  bottom: -2px;
+  right: -2px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(90deg, var(--verde2), var(--olive));
   color: #0a0710;
-  font-size: 1.2rem;
-  box-shadow: 0 0 32px rgba(0, 200, 120, 0.4);
+  font-size: 0.6rem;
+  border: 2px solid var(--bg-alt);
 }
 
 .depoimento-card-body {

@@ -37,8 +37,6 @@ const SYLVANA_RIBEIRO = {
 
 // Depoimentos reais de alunos da dev club.
 export const DEPOIMENTOS = [
-  SYLVANA_RIBEIRO,
-  ADRIANO_COUTINHO,
   {
     slug: "aristoteles-aguiar",
     nome: "Aristoteles Aguiar",

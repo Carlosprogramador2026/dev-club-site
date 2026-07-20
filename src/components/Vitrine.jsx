@@ -63,19 +63,14 @@ export default function Vitrine() {
                 className="depoimento-card depoimento-card--video"
               >
                 {d.videoSrc ? (
-                  <div className="depoimento-card-video-wrap">
-                    <video
-                      src={d.videoSrc}
-                      poster={d.foto || undefined}
-                      className="depoimento-card-video"
-                      muted
-                      playsInline
-                      preload="none"
-                    />
-                    <span className="depoimento-card-play" aria-hidden="true">
-                      ▶
-                    </span>
-                  </div>
+                  <video
+                    src={d.videoSrc}
+                    poster={d.foto || undefined}
+                    className="depoimento-card-video"
+                    muted
+                    playsInline
+                    preload="none"
+                  />
                 ) : d.foto ? (
                   <img
                     src={d.foto}
@@ -86,8 +81,34 @@ export default function Vitrine() {
                   <div className="depoimento-card-video depoimento-avatar" aria-hidden="true" />
                 )}
                 <div className="depoimento-card-body">
-                  <strong>{d.nome}</strong>
-                  <span>{d.antes}</span>
+                  <div className="depoimento-card-avatar-row">
+                    {d.foto ? (
+                      <span className="depoimento-card-avatar-wrap">
+                        <img
+                          src={d.foto}
+                          alt={d.nome}
+                          className="depoimento-card-avatar"
+                        />
+                        {d.videoSrc && (
+                          <span
+                            className="depoimento-card-play-badge"
+                            aria-hidden="true"
+                          >
+                            ▶
+                          </span>
+                        )}
+                      </span>
+                    ) : (
+                      <div
+                        className="depoimento-avatar depoimento-card-avatar"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <div>
+                      <strong>{d.nome}</strong>
+                      <span>{d.antes}</span>
+                    </div>
+                  </div>
                   <p>&ldquo;{d.texto}&rdquo;</p>
                 </div>
               </Link>
