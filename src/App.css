@@ -986,6 +986,47 @@
   margin-bottom: 0;
 }
 
+.depoimento-card--video {
+  padding: 0;
+  overflow: hidden;
+}
+
+.depoimento-card-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.depoimento-card-body {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.depoimento-card-body strong {
+  font-size: 0.95rem;
+}
+
+.depoimento-card-body span {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.depoimento-card-body p {
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin: 10px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @keyframes vitrine-float {
   0%,
   100% {

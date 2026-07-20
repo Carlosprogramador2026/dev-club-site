@@ -13,6 +13,17 @@ const ADRIANO_COUTINHO = {
   videoSrc: asset("video-depoimento-adriano.mp4"),
 }
 
+const CARLOS_BONITO = {
+  slug: "carlos-bonito",
+  nome: "Carlos Alberto Sanches Bonito",
+  antes: "—",
+  texto:
+    "Meu nome é Carlos Alberto Sanches Bonito, tenho 37 anos e, durante muitos anos, procurei uma profissão que realmente pudesse transformar a minha vida. Meu maior sonho sempre foi oferecer uma vida melhor para meus filhos e para minha família, com mais segurança, tranquilidade e momentos de lazer que antes pareciam distantes da nossa realidade. Foi na programação que encontrei essa oportunidade. Mesmo enfrentando dificuldades e tendo que estudar diariamente, nunca desisti do meu objetivo. Cada aula concluída, cada projeto desenvolvido e cada desafio superado me aproximavam do sonho de viver da tecnologia. Participar da comunidade da DevClub foi um divisor de águas. Com muito esforço e dedicação, comecei a desenvolver sites profissionais, sistemas personalizados e soluções com Agentes de Inteligência Artificial para empresas. Esses projetos abriram portas para novas oportunidades e me permitiram crescer como freelancer. Ao longo dessa jornada, conquistei resultados que nunca imaginei alcançar, superando a marca de R$ 60 mil em projetos de desenvolvimento. Mais do que o retorno financeiro, ganhei confiança, experiência e a certeza de que investir em conhecimento foi a melhor decisão da minha vida. Hoje continuo evoluindo todos os dias, construindo minha carreira na tecnologia e trabalhando para oferecer um futuro ainda melhor para minha família.",
+  foto: asset("carlos-bonito.jpeg"),
+  videoId: null,
+  videoSrc: asset("video-depoimento-carlos.mp4"),
+}
+
 const SYLVANA_RIBEIRO = {
   slug: "sylvana-ribeiro",
   nome: "Sylvana Monteiro Paes Ribeiro",
@@ -177,20 +188,7 @@ export const DEPOIMENTOS = [
 // Depoimentos de alunos que fecharam freelas pela dev club — aguardando mais
 // casos reais (nome, foto, quanto faturou, video) pra substituir os
 // placeholders "em breve" restantes.
-export const FREELA_DEPOIMENTOS = [
-  SYLVANA_RIBEIRO,
-  ADRIANO_COUTINHO,
-  {
-    slug: "freela-3",
-    nome: "Em breve",
-    antes: "Freela fechado com a dev club",
-    texto: "Depoimento de freela em breve.",
-    data: "Em breve",
-    foto: null,
-    videoId: null,
-    videoSrc: null,
-  },
-]
+export const FREELA_DEPOIMENTOS = [SYLVANA_RIBEIRO, ADRIANO_COUTINHO, CARLOS_BONITO]
 
 export function getDepoimentoBySlug(slug) {
   return [...DEPOIMENTOS, ...FREELA_DEPOIMENTOS].find((d) => d.slug === slug)

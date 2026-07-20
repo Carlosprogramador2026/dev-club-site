@@ -58,23 +58,35 @@ export default function Vitrine() {
         <div className="depoimentos-grid vitrine-freelas-grid">
           {FREELA_DEPOIMENTOS.map((d, i) => (
             <Reveal key={d.slug} delay={i * 80}>
-              <Link to={`/depoimentos/${d.slug}`} className="depoimento-card">
-                <div className="depoimento-topo">
-                  {d.foto ? (
-                    <img
-                      src={d.foto}
-                      alt={d.nome}
-                      className="depoimento-foto"
-                    />
-                  ) : (
-                    <div className="depoimento-avatar" aria-hidden="true" />
-                  )}
-                  <div>
-                    <strong>{d.nome}</strong>
-                    <span>{d.antes}</span>
-                  </div>
+              <Link
+                to={`/depoimentos/${d.slug}`}
+                className="depoimento-card depoimento-card--video"
+              >
+                {d.videoSrc ? (
+                  <video
+                    src={d.videoSrc}
+                    poster={d.foto || undefined}
+                    className="depoimento-card-video"
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : d.foto ? (
+                  <img
+                    src={d.foto}
+                    alt={d.nome}
+                    className="depoimento-card-video"
+                  />
+                ) : (
+                  <div className="depoimento-card-video depoimento-avatar" aria-hidden="true" />
+                )}
+                <div className="depoimento-card-body">
+                  <strong>{d.nome}</strong>
+                  <span>{d.antes}</span>
+                  <p>&ldquo;{d.texto}&rdquo;</p>
                 </div>
-                <p>&ldquo;{d.texto}&rdquo;</p>
               </Link>
             </Reveal>
           ))}
