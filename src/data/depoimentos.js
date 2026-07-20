@@ -16,7 +16,7 @@ const ADRIANO_COUTINHO = {
 const CARLOS_BONITO = {
   slug: "carlos-bonito",
   nome: "Carlos Alberto Sanches Bonito",
-  antes: "—",
+  antes: "Desenvolvedor Front-end Júnior",
   texto:
     "Meu nome é Carlos Alberto Sanches Bonito, tenho 37 anos e, durante muitos anos, procurei uma profissão que realmente pudesse transformar a minha vida. Meu maior sonho sempre foi oferecer uma vida melhor para meus filhos e para minha família, com mais segurança, tranquilidade e momentos de lazer que antes pareciam distantes da nossa realidade. Foi na programação que encontrei essa oportunidade. Mesmo enfrentando dificuldades e tendo que estudar diariamente, nunca desisti do meu objetivo. Cada aula concluída, cada projeto desenvolvido e cada desafio superado me aproximavam do sonho de viver da tecnologia. Participar da comunidade da DevClub foi um divisor de águas. Com muito esforço e dedicação, comecei a desenvolver sites profissionais, sistemas personalizados e soluções com Agentes de Inteligência Artificial para empresas. Esses projetos abriram portas para novas oportunidades e me permitiram crescer como freelancer. Ao longo dessa jornada, conquistei resultados que nunca imaginei alcançar, superando a marca de R$ 60 mil em projetos de desenvolvimento. Mais do que o retorno financeiro, ganhei confiança, experiência e a certeza de que investir em conhecimento foi a melhor decisão da minha vida. Hoje continuo evoluindo todos os dias, construindo minha carreira na tecnologia e trabalhando para oferecer um futuro ainda melhor para minha família.",
   foto: asset("carlos-bonito.jpeg"),
@@ -27,7 +27,7 @@ const CARLOS_BONITO = {
 const SYLVANA_RIBEIRO = {
   slug: "sylvana-ribeiro",
   nome: "Sylvana Monteiro Paes Ribeiro",
-  antes: "—",
+  antes: "Desenvolvedora Web",
   texto:
     "Nunca pensei que conseguiria aprender programação. Em vários momentos achei que aquilo não era para mim, mas resolvi continuar estudando, um passo de cada vez. Aos poucos fui entendendo como criar páginas, automatizar processos e desenvolver soluções para pequenas empresas. Quando percebi que podia ajudar clientes reais, comecei a trabalhar como freelancer. Hoje desenvolvo sistemas, sites e agentes de Inteligência Artificial para diferentes negócios. Mais do que conquistar novos projetos, encontrei uma profissão que me desafia todos os dias e me faz acreditar que sempre é possível recomeçar e evoluir.",
   foto: asset("sylvana-ribeiro.jpeg"),
