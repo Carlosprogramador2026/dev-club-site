@@ -1,7 +1,33 @@
 import { asset } from "../utils/asset"
 
+// Depoimentos de alunos que fecharam freelas pela dev club — aparecem tanto
+// na seção geral de depoimentos quanto na vitrine "Resultado real".
+const ADRIANO_COUTINHO = {
+  slug: "adriano-coutinho",
+  nome: "Adriano dos Reis Coutinho",
+  antes: "Técnico em Informática",
+  texto:
+    "Participar da campanha de junho da DevClub foi um grande incentivo para colocar em prática tudo o que vinha aprendendo. Durante esse período, comecei a oferecer soluções como freelancer, desenvolvendo agentes de Inteligência Artificial, sistemas personalizados e sites para empresas. Cada projeto me trouxe mais experiência, confiança e novas oportunidades no mercado. O conhecimento adquirido me mostrou que a programação pode abrir portas para uma carreira promissora e me permitiu transformar aprendizado em resultados concretos. Hoje continuo evoluindo, buscando novos clientes e expandindo minha atuação com soluções de IA para empresas de diversos segmentos.",
+  foto: asset("adriano-coutinho.jpeg"),
+  videoId: null,
+  videoSrc: asset("video-depoimento-adriano.mp4"),
+}
+
+const SYLVANA_RIBEIRO = {
+  slug: "sylvana-ribeiro",
+  nome: "Sylvana Monteiro Paes Ribeiro",
+  antes: "—",
+  texto:
+    "Nunca pensei que conseguiria aprender programação. Em vários momentos achei que aquilo não era para mim, mas resolvi continuar estudando, um passo de cada vez. Aos poucos fui entendendo como criar páginas, automatizar processos e desenvolver soluções para pequenas empresas. Quando percebi que podia ajudar clientes reais, comecei a trabalhar como freelancer. Hoje desenvolvo sistemas, sites e agentes de Inteligência Artificial para diferentes negócios. Mais do que conquistar novos projetos, encontrei uma profissão que me desafia todos os dias e me faz acreditar que sempre é possível recomeçar e evoluir.",
+  foto: asset("sylvana-ribeiro.jpeg"),
+  videoId: null,
+  videoSrc: asset("video-depoimento-sylvana.mp4"),
+}
+
 // Depoimentos reais de alunos da dev club.
 export const DEPOIMENTOS = [
+  SYLVANA_RIBEIRO,
+  ADRIANO_COUTINHO,
   {
     slug: "aristoteles-aguiar",
     nome: "Aristoteles Aguiar",
@@ -148,30 +174,12 @@ export const DEPOIMENTOS = [
   },
 ]
 
-// Depoimentos de alunos que fecharam freelas pela dev club — aguardando
+// Depoimentos de alunos que fecharam freelas pela dev club — aguardando mais
 // casos reais (nome, foto, quanto faturou, video) pra substituir os
-// placeholders "em breve".
+// placeholders "em breve" restantes.
 export const FREELA_DEPOIMENTOS = [
-  {
-    slug: "freela-1",
-    nome: "Em breve",
-    antes: "Freela fechado com a dev club",
-    texto: "Depoimento de freela em breve.",
-    data: "Em breve",
-    foto: null,
-    videoId: null,
-    videoSrc: null,
-  },
-  {
-    slug: "freela-2",
-    nome: "Em breve",
-    antes: "Freela fechado com a dev club",
-    texto: "Depoimento de freela em breve.",
-    data: "Em breve",
-    foto: null,
-    videoId: null,
-    videoSrc: null,
-  },
+  SYLVANA_RIBEIRO,
+  ADRIANO_COUTINHO,
   {
     slug: "freela-3",
     nome: "Em breve",
