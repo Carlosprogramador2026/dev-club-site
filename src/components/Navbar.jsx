@@ -3,7 +3,14 @@ import { Link, useLocation } from "react-router-dom"
 import { CURSOS } from "../data/cursos"
 import { asset } from "../utils/asset"
 
-const OBSERVED_IDS = ["cursos", "sobre", "depoimentos", "ias-ilimitadas"]
+const OBSERVED_IDS = [
+  "cursos",
+  "sobre",
+  "depoimentos",
+  "ias-ilimitadas",
+  "vitrine",
+  "equipe",
+]
 
 export default function Navbar() {
   const location = useLocation()
@@ -95,6 +102,13 @@ export default function Navbar() {
           </div>
 
           <Link
+            to="/#vitrine"
+            className={activeId === "vitrine" ? "active" : undefined}
+          >
+            Resultado real
+          </Link>
+
+          <Link
             to="/#ias-ilimitadas"
             className={activeId === "ias-ilimitadas" ? "active" : undefined}
           >
@@ -120,6 +134,13 @@ export default function Navbar() {
             }
           >
             Newsletter
+          </Link>
+
+          <Link
+            to="/#equipe"
+            className={activeId === "equipe" ? "active" : undefined}
+          >
+            Equipe
           </Link>
 
           <Link
