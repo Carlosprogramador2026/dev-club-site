@@ -470,7 +470,7 @@
   display: flex;
   gap: 20px;
   width: max-content;
-  padding: 4px 24px 20px;
+  padding: 28px 24px 36px;
   will-change: transform;
   animation: cursos-scroll 32s linear infinite;
 }
@@ -988,7 +988,6 @@
 
 .depoimento-card--video {
   padding: 0;
-  overflow: hidden;
 }
 
 .depoimento-card-video {
@@ -998,6 +997,7 @@
   display: block;
   background: #000;
   flex-shrink: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .depoimento-card-avatar-row {
