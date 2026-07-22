@@ -1406,12 +1406,45 @@
   max-width: 150vw;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 3px solid rgba(200, 160, 255, 0.9);
   box-shadow:
-    0 0 40px 12px rgba(200, 160, 255, 0.8),
-    0 0 100px 50px rgba(124, 77, 255, 0.5),
-    0 0 220px 120px rgba(98, 40, 215, 0.28);
+    0 0 40px 12px rgba(200, 160, 255, 0.6),
+    0 0 100px 50px rgba(124, 77, 255, 0.4),
+    0 0 220px 120px rgba(98, 40, 215, 0.22);
   animation: glow-arc-breathe 5s ease-in-out infinite;
+}
+
+/* Anel de luz RGB girando sobre o arco — conic-gradient recortado em anel
+   via mask, animando so' transform (leve, sem repintar o box-shadow). */
+.glow-arc::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  padding: 6px;
+  background: conic-gradient(
+    from 0deg,
+    #ff2d78,
+    #ff9900,
+    #f6ff00,
+    #00ffa3,
+    #00c2ff,
+    #00ff88,
+    #ff2d78
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  filter: blur(7px);
+  animation: glow-arc-spin 6s linear infinite;
+  will-change: transform;
+}
+
+@keyframes glow-arc-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes glow-arc-breathe {
@@ -1598,6 +1631,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .glow-arc,
+  .glow-arc::before,
   .notebook-screen,
   .notebook-code-track,
   .glow-sparkle {
