@@ -1390,60 +1390,87 @@
   pointer-events: none;
 }
 
+/* Arco de luz — dome brilhante com raios e cor mudando continuamente
+   (hue-rotate). So anima filter/opacity (leve, sem reflow). */
 .glow-arc-stage {
   position: relative;
   height: 320px;
-  overflow: hidden;
+  overflow: hidden; /* corta o dome, deixando so' o "arco" visivel */
 }
 
 .glow-arc {
   position: absolute;
-  bottom: -320px;
+  bottom: -580px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 640px;
-  height: 640px;
-  max-width: 150vw;
+  width: 900px;
+  max-width: 180vw;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  box-shadow:
-    0 0 40px 12px rgba(200, 160, 255, 0.6),
-    0 0 100px 50px rgba(124, 77, 255, 0.4),
-    0 0 220px 120px rgba(98, 40, 215, 0.22);
-  animation: glow-arc-breathe 5s ease-in-out infinite;
+  transform: translateX(-50%);
+
+  /* nucleo branco -> roxo -> transparente, da o "brilho do sol nascendo".
+     Paradas em px (nao %) porque % de radial-gradient e relativo ao canto
+     mais distante do circulo de 900px — em % a faixa visivel (só os
+     320px do topo, ver .glow-arc-stage) cai toda dentro do "meio" do
+     degrade e nunca mostra o nucleo branco nem chega no transparente. */
+  background: radial-gradient(
+    circle at 50% 0%,
+    #ffffff 0,
+    #e4c9ff 30px,
+    #b586ff 80px,
+    rgba(124, 77, 255, 0.45) 160px,
+    rgba(98, 40, 215, 0.15) 260px,
+    transparent 340px
+  );
+
+  filter: blur(4px) hue-rotate(0deg);
+  animation: glow-arc-color 10s linear infinite;
 }
 
-/* Anel de luz RGB girando sobre o arco — conic-gradient recortado em anel
-   via mask, animando so' transform (leve, sem repintar o box-shadow). */
+/* borda fina e nitida no topo do dome, simulando o "traco" do arco */
 .glow-arc::before {
   content: "";
   position: absolute;
-  inset: -6px;
+  inset: 0;
   border-radius: inherit;
-  padding: 6px;
-  background: conic-gradient(
-    from 0deg,
-    #ff2d78,
-    #ff9900,
-    #f6ff00,
-    #00ffa3,
-    #00c2ff,
-    #00ff88,
-    #ff2d78
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  filter: blur(7px);
-  animation: glow-arc-spin 6s linear infinite;
-  will-change: transform;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85) inset;
+  -webkit-mask: linear-gradient(#fff, transparent 45%);
+  mask: linear-gradient(#fff, transparent 45%);
+  filter: blur(1px);
 }
 
-@keyframes glow-arc-spin {
-  to {
-    transform: rotate(360deg);
+/* raios de luz se abrindo pros lados a partir do topo do arco */
+.glow-arc::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 200deg at 50% 0%,
+    transparent 0deg,
+    rgba(255, 255, 255, 0.18) 12deg,
+    transparent 22deg,
+    transparent 48deg,
+    rgba(255, 255, 255, 0.12) 58deg,
+    transparent 68deg,
+    transparent 112deg,
+    rgba(255, 255, 255, 0.12) 122deg,
+    transparent 132deg,
+    transparent 158deg,
+    rgba(255, 255, 255, 0.18) 168deg,
+    transparent 180deg
+  );
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+/* a cor passeia pelo espectro RGB devagar, sem girar nada */
+@keyframes glow-arc-color {
+  0% {
+    filter: blur(4px) hue-rotate(0deg);
+  }
+  100% {
+    filter: blur(4px) hue-rotate(360deg);
   }
 }
 
@@ -1631,7 +1658,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .glow-arc,
-  .glow-arc::before,
   .notebook-screen,
   .notebook-code-track,
   .glow-sparkle {
