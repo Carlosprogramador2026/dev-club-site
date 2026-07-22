@@ -6,7 +6,7 @@ export default function FaqGeral() {
     <section id="faq">
       <div className="container">
         <span className="section-tag">Perguntas frequentes</span>
-        <h2 className="section-title">Dúvidas sobre a dev club</h2>
+        <h2 className="section-title">Dúvidas sobre a Dev Club</h2>
         <p className="section-subtitle">
           O que a maioria pergunta antes de começar.
         </p>

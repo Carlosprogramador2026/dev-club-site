@@ -1,5 +1,5 @@
 // Título real + resumo curto (2-3 frases) pra cada post do blog.
-// Categorias seguem as 8 trilhas reais da dev club.
+// Categorias seguem as 8 trilhas reais da Dev Club.
 export const POSTS = [
   {
     slug: "html-guia-completo",

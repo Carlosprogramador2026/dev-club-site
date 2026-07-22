@@ -1,6 +1,6 @@
 import { asset } from "../utils/asset"
 
-// Depoimentos de alunos que fecharam freelas pela dev club — aparecem tanto
+// Depoimentos de alunos que fecharam freelas pela Dev Club — aparecem tanto
 // na seção geral de depoimentos quanto na vitrine "Resultado real".
 const ADRIANO_COUTINHO = {
   slug: "adriano-coutinho",
@@ -35,14 +35,14 @@ const SYLVANA_RIBEIRO = {
   videoSrc: asset("video-depoimento-sylvana.mp4"),
 }
 
-// Depoimentos reais de alunos da dev club.
+// Depoimentos reais de alunos da Dev Club.
 export const DEPOIMENTOS = [
   {
     slug: "aristoteles-aguiar",
     nome: "Aristoteles Aguiar",
     antes: "Assistente de Tecnologia",
     texto:
-      "Hoje sou um dos responsáveis pelo chatbot da Unimed Ceará, integrado com a OpenAI. Consegui a vaga num processo interno concorrido, colocando em prática tudo que aprendi na dev club — com mentoria de perto e suporte de verdade durante o caminho.",
+      "Hoje sou um dos responsáveis pelo chatbot da Unimed Ceará, integrado com a OpenAI. Consegui a vaga num processo interno concorrido, colocando em prática tudo que aprendi na Dev Club — com mentoria de perto e suporte de verdade durante o caminho.",
     historia:
       "Um dos responsáveis pelo desenvolvimento do Chatbot da Unimed Ceará e integrado com a OpenAI.",
     comoConseguiu:
@@ -74,9 +74,9 @@ export const DEPOIMENTOS = [
     nome: "Vanessa Lebrão Quintilhano",
     antes: "Veterinária",
     texto:
-      "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a dev club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
+      "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a Dev Club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
     historia:
-      "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a dev club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
+      "Vim da veterinária. Me candidatei direto com o recrutador de uma vaga, e a Dev Club me ajudou a montar currículo, LinkedIn e me preparar de verdade pra entrevista — fiz cerca de 10 entrevistas naquele mês até conseguir o \"sim\".",
     comoConseguiu:
       "Me candidatei a uma vaga na empresa Zallpy Digital, mandei mensagem diretamente ao Tech Recruiter. Meu irmão presta serviço nessa empresa e comentei que tinha me interessado pela vaga, ele me indicou (depois de eu já ter aplicado e falado com o Tech Recruiter). Marcaram um bate-papo e era uma vaga de trainee.",
     comoAjudou:
@@ -105,7 +105,7 @@ export const DEPOIMENTOS = [
   {
     slug: "williane-pinheiro",
     nome: "Williane Delfino Pinheiro",
-    antes: "—",
+    antes: "Pedagoga",
     texto:
       "O DevClub foi imprescindível, primeiro por me apresentar ao mundo da programação, que é gigante e cheio de oportunidades.",
     historia:
@@ -121,7 +121,7 @@ export const DEPOIMENTOS = [
   {
     slug: "bruno-barbosa",
     nome: "Bruno Barbosa",
-    antes: "—",
+    antes: "Mecânico Automotivo",
     texto:
       "Vi um anúncio no Instagram, fiz as aulas e comecei a correr atrás da mudança de vida — não está sendo fácil, mas estou feliz por estar mudando minha realidade.",
     historia:
@@ -137,11 +137,11 @@ export const DEPOIMENTOS = [
   {
     slug: "annanda-farias",
     nome: "Annanda Farias",
-    antes: "—",
+    antes: "Administração",
     texto:
       "Encontrei o canal do Rodolfo Mori no YouTube e comecei a assistir os vídeos e as lives. Estudava 16 horas por dia.",
     historia:
-      "Resolvi começar a aprender programação em janeiro de 2025. Encontrei o canal do Rodolfo Mori no YouTube e comecei a assistir os vídeos e as lives. Estudava 16 horas por dia, até que em abril meu noivo me deu o curso de front-end da dev club, e em setembro comecei no meu primeiro emprego como programadora.",
+      "Resolvi começar a aprender programação em janeiro de 2025. Encontrei o canal do Rodolfo Mori no YouTube e comecei a assistir os vídeos e as lives. Estudava 16 horas por dia, até que em abril meu noivo me deu o curso de front-end da Dev Club, e em setembro comecei no meu primeiro emprego como programadora.",
     comoConseguiu:
       "Na última empresa onde trabalhei, tinha um colega que fazia toda a programação na empresa. Quando comecei a estudar, comentei com ele. Em abril fui demitida e deixei meu portfólio com esse meu colega. Agora em setembro ele entrou em contato comigo pra me fazer a proposta de emprego. Aceitei na hora.",
     comoAjudou:
@@ -153,14 +153,14 @@ export const DEPOIMENTOS = [
   {
     slug: "lucas-rios",
     nome: "Lucas Rios",
-    antes: "—",
+    antes: "Marketing - Editor De Vídeo E Design",
     texto:
       "Eu sempre buscava algo que me trouxesse liberdade pessoal e financeira, e meu estudo na programação me mostrava isso dia após dia.",
     historia:
-      "Resumidamente, eu sempre buscava algo que me trouxesse liberdade pessoal e financeira, e meu estudo na programação me mostrava isso dia após dia vendo pessoas bem sucedidas na área. Isso me motiva todos os dias a seguir nessa área que tanto amo. Eu pensava, sinceramente, que não iria conseguir, porque sempre fazia cursos fracos, literalmente \"no cru\" — mas depois que conheci a dev club do Rodolfo através de um amigo, mudei meus pensamentos e minha realidade. Ainda não terminei o curso, mas foco e perseverança sempre vencem.",
+      "Resumidamente, eu sempre buscava algo que me trouxesse liberdade pessoal e financeira, e meu estudo na programação me mostrava isso dia após dia vendo pessoas bem sucedidas na área. Isso me motiva todos os dias a seguir nessa área que tanto amo. Eu pensava, sinceramente, que não iria conseguir, porque sempre fazia cursos fracos, literalmente \"no cru\" — mas depois que conheci a Dev Club do Rodolfo através de um amigo, mudei meus pensamentos e minha realidade. Ainda não terminei o curso, mas foco e perseverança sempre vencem.",
     comoConseguiu: "Vários \"não\" até chegar no primeiro \"sim\".",
     comoAjudou:
-      "Ajudou e muito — se não fosse a dev club eu não teria pegado uma visão real do mercado, e sem dúvidas o conhecimento prático foi essencial e está sendo ainda.",
+      "Ajudou e muito — se não fosse a Dev Club eu não teria pegado uma visão real do mercado, e sem dúvidas o conhecimento prático foi essencial e está sendo ainda.",
     data: "Primeiro emprego como programador em fevereiro de 2025",
     foto: asset("lucas-rios.png"),
     videoId: "C4jYx1z7qZQ",
@@ -168,22 +168,22 @@ export const DEPOIMENTOS = [
   {
     slug: "thiago-zambrin",
     nome: "Thiago Leopoldo Zambrin Filho",
-    antes: "—",
+    antes: "Freelancer",
     texto:
-      "Comecei na programação aos 16 anos sem saber nada. Aos 5 meses de dev club fiz meu primeiro freela, e aos 7 meses consegui meu primeiro emprego.",
+      "Comecei na programação aos 16 anos sem saber nada. Aos 5 meses de Dev Club fiz meu primeiro freela, e aos 7 meses consegui meu primeiro emprego.",
     historia:
-      "Comecei na programação aos 16 anos, no começo de 2023, sem saber nada. Aos 5 meses de dev club fiz meu primeiro freela, e aos 7 meses consegui meu primeiro emprego.",
+      "Comecei na programação aos 16 anos, no começo de 2023, sem saber nada. Aos 5 meses de Dev Club fiz meu primeiro freela, e aos 7 meses consegui meu primeiro emprego.",
     comoConseguiu:
       "Busquei bastante no LinkedIn, Glassdoor e Programathor, mas consegui um contato aqui em Londrina — analisaram minhas skills e fui contratado.",
     comoAjudou:
-      "A dev club me ensinou tudo que eu sei hoje sobre programação, desde o mais básico ao mais avançado. As aulas, o suporte dos staffs e até mesmo da comunidade — tudo isso influenciou muito nessa jornada.",
+      "A Dev Club me ensinou tudo que eu sei hoje sobre programação, desde o mais básico ao mais avançado. As aulas, o suporte dos staffs e até mesmo da comunidade — tudo isso influenciou muito nessa jornada.",
     data: "Primeiro emprego como programador em agosto de 2023",
     foto: asset("thiago-zambrin.png"),
     videoId: "iva-R6gDvC8",
   },
 ]
 
-// Depoimentos de alunos que fecharam freelas pela dev club — aguardando mais
+// Depoimentos de alunos que fecharam freelas pela Dev Club — aguardando mais
 // casos reais (nome, foto, quanto faturou, video) pra substituir os
 // placeholders "em breve" restantes.
 export const FREELA_DEPOIMENTOS = [ADRIANO_COUTINHO, SYLVANA_RIBEIRO, CARLOS_BONITO]

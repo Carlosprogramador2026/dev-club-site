@@ -1,7 +1,7 @@
-export const DIFERENCIAIS_TITULO = "Por que escolher a dev club"
+export const DIFERENCIAIS_TITULO = "Por que escolher a Dev Club"
 
 export const DIFERENCIAIS_SUBTITULO =
-  "O que separa a dev club de um curso gravado sem acompanhamento."
+  "O que separa a Dev Club de um curso gravado sem acompanhamento."
 
 export const DIFERENCIAIS = [
   {

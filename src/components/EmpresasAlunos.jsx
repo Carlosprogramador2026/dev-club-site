@@ -8,11 +8,11 @@ export default function EmpresasAlunos() {
         <span className="section-tag">Onde nossos alunos estão</span>
         <h2 className="section-title">
           Empresas que já contrataram{" "}
-          <span className="gradient-text">alunos da dev club</span>
+          <span className="gradient-text">alunos da Dev Club</span>
         </h2>
         <p className="section-subtitle">
           Indicação real pro mercado de trabalho — alunos que passaram pela
-          dev club e conquistaram vaga nessas empresas.
+          Dev Club e conquistaram vaga nessas empresas.
         </p>
 
         <Reveal>

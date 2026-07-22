@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-subtitle">
-            A dev club forma devs júnior do zero ao primeiro emprego, com
+            A Dev Club forma devs júnior do zero ao primeiro emprego, com
             cursos práticos de front-end, back-end, cloud, mobile e IA — e
             uma equipe de verdade acompanhando cada etapa.
           </p>

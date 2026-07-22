@@ -7,7 +7,7 @@ export default function Ceo() {
   return (
     <section id="ceo">
       <div className="container">
-        <span className="section-tag">Quem lidera a dev club</span>
+        <span className="section-tag">Quem lidera a Dev Club</span>
         <h2 className="section-title">
           Uma mensagem direto do{" "}
           <span className="gradient-text">fundador</span>

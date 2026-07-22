@@ -2,24 +2,24 @@ import { asset } from "../utils/asset"
 
 export const FUNDADOR = {
   nome: "Rodolfo Mori",
-  cargo: "Fundador e CEO da dev club",
+  cargo: "Fundador e CEO da Dev Club",
   foto: asset("rodolfo.jpg"),
   bioResumo: [
-    "Rodolfo Mori é desenvolvedor de software, empreendedor e fundador da dev club, uma escola especializada na formação de desenvolvedores pro mercado de tecnologia. Com experiência em desenvolvimento de software e educação tecnológica, dedica a carreira a ensinar programação de forma prática, acessível e alinhada com o que as empresas precisam.",
-    "A metodologia da dev club prioriza projetos reais, construção de portfólio, resolução de problemas e preparação pra processos seletivos — aproximando o aprendizado da rotina de um desenvolvedor profissional.",
-    "Hoje a dev club mantém uma comunidade ativa de estudantes e profissionais que trocam conhecimento, experiência e oportunidades de crescimento.",
+    "Rodolfo Mori é desenvolvedor de software, empreendedor e fundador da Dev Club, uma escola especializada na formação de desenvolvedores pro mercado de tecnologia. Com experiência em desenvolvimento de software e educação tecnológica, dedica a carreira a ensinar programação de forma prática, acessível e alinhada com o que as empresas precisam.",
+    "A metodologia da Dev Club prioriza projetos reais, construção de portfólio, resolução de problemas e preparação pra processos seletivos — aproximando o aprendizado da rotina de um desenvolvedor profissional.",
+    "Hoje a Dev Club mantém uma comunidade ativa de estudantes e profissionais que trocam conhecimento, experiência e oportunidades de crescimento.",
   ],
   bio: [
     "Rodolfo Mori nasceu e cresceu na periferia de São Paulo, estudou em escola pública e começou a trabalhar ainda jovem. Antes de entrar pra tecnologia, foi eletricista no Metrô de São Paulo — uma profissão estável, mas distante do futuro que ele queria construir pra si e pra família.",
     "Foi em meio a dificuldades pessoais e financeiras que descobriu a programação. Sem faculdade na área e sem experiência prévia, estudou sozinho durante noites, fins de semana e feriados, encaixando os estudos entre um turno de trabalho e outro.",
     "Foram 13 recusas até a primeira vaga como programador. Em vez de desistir, transformou cada entrevista em aprendizado — e em cerca de seis meses de estudo intenso, conquistou seu primeiro emprego na área, no Santander.",
     "Dali em diante, sua carreira acelerou: passou por instituições como BTG Pactual, PI Investimentos e Toro Investimentos, acumulando experiência real em desenvolvimento de software e arquitetura de sistemas no mercado financeiro.",
-    "Ao longo do caminho, percebeu que milhares de pessoas enfrentavam a mesma dificuldade que ele: aprender teoria sem conseguir a prática que o mercado exige. Foi dessa constatação que nasceu a dev club, em 2020 — uma escola criada pra unir conteúdo técnico, projetos reais, mentoria e suporte contínuo, com um único objetivo: levar o aluno até o primeiro emprego.",
-    "Hoje Rodolfo segue atuando como desenvolvedor Full Stack, empreendedor e educador, e a dev club já formou milhares de alunos em todo o Brasil. Pra ele, a tecnologia continua sendo a ferramenta mais poderosa que conhece pra mudar de vida — porque foi exatamente isso que aconteceu com a dele.",
+    "Ao longo do caminho, percebeu que milhares de pessoas enfrentavam a mesma dificuldade que ele: aprender teoria sem conseguir a prática que o mercado exige. Foi dessa constatação que nasceu a Dev Club, em 2020 — uma escola criada pra unir conteúdo técnico, projetos reais, mentoria e suporte contínuo, com um único objetivo: levar o aluno até o primeiro emprego.",
+    "Hoje Rodolfo segue atuando como desenvolvedor Full Stack, empreendedor e educador, e a Dev Club já formou milhares de alunos em todo o Brasil. Pra ele, a tecnologia continua sendo a ferramenta mais poderosa que conhece pra mudar de vida — porque foi exatamente isso que aconteceu com a dele.",
   ],
 }
 
-// A dev club tem mais de 100 profissionais no total, entre diretos e
+// A Dev Club tem mais de 100 profissionais no total, entre diretos e
 // indiretos. Cards abaixo mostram os principais/mais visíveis.
 export const EQUIPE = [
   {
@@ -32,19 +32,19 @@ export const EQUIPE = [
     nome: "Fernanda Costa",
     cargo: "Mentora de Carreira e Psicóloga",
     foto: asset("fernanda-costa.png"),
-    bio: "Mentora de carreira, orientadora profissional, professora e estudante de Psicologia. Depois de 10 anos numa multinacional, decidiu empreender orientando profissionais em suas carreiras — já acompanhou mais de 700 pessoas, atuando também como treinadora corporativa, palestrante e analista comportamental. Foi comissária de voo por mais de 10 anos, experiência que reforçou sua visão sobre comportamento humano, atendimento e liderança sob pressão. Hoje ajuda alunos da dev club em momentos de transição de carreira.",
+    bio: "Mentora de carreira, orientadora profissional, professora e estudante de Psicologia. Depois de 10 anos numa multinacional, decidiu empreender orientando profissionais em suas carreiras — já acompanhou mais de 700 pessoas, atuando também como treinadora corporativa, palestrante e analista comportamental. Foi comissária de voo por mais de 10 anos, experiência que reforçou sua visão sobre comportamento humano, atendimento e liderança sob pressão. Hoje ajuda alunos da Dev Club em momentos de transição de carreira.",
   },
   {
     nome: "Andrey Maia",
     cargo: "Desenvolvedor Full Stack e Suporte de Produto",
     foto: asset("andrey-maia.jpg"),
-    bio: "Desenvolvedor Full Stack e estudante de Engenharia de Software na UNIASSELVI. Atua no time de suporte e produto da dev club, ajudando alunos em transição de carreira, organizando conteúdo e orientando trilhas de estudo. Trabalha com React, Node.js, TypeScript, além de IA e automações com n8n.",
+    bio: "Desenvolvedor Full Stack e estudante de Engenharia de Software na UNIASSELVI. Atua no time de suporte e produto da Dev Club, ajudando alunos em transição de carreira, organizando conteúdo e orientando trilhas de estudo. Trabalha com React, Node.js, TypeScript, além de IA e automações com n8n.",
   },
   {
     nome: "Mateus Nogueira",
     cargo: "Professor de I.A.",
     foto: asset("mateus-nogueira.png"),
-    bio: "Especialista em inteligência artificial aplicada, com foco em como agentes de IA são projetados e usados na prática — de prompts pontuais a sistemas mais autônomos. Ajuda alunos da dev club a entender e aplicar IA de forma real no dia a dia de desenvolvimento.",
+    bio: "Especialista em inteligência artificial aplicada, com foco em como agentes de IA são projetados e usados na prática — de prompts pontuais a sistemas mais autônomos. Ajuda alunos da Dev Club a entender e aplicar IA de forma real no dia a dia de desenvolvimento.",
   },
   {
     nome: "Gabriel Pimenta",
@@ -68,6 +68,6 @@ export const EQUIPE = [
     nome: "Ronald Andrade",
     cargo: "Em transição de carreira",
     foto: asset("ronald-andrade.jpeg"),
-    bio: "Tem 25 anos e está em fase de transição de carreira, vindo da área de informática rumo ao desenvolvimento Web. Está cursando a formação de programadores da dev club, onde vem se desenvolvendo em tecnologias como HTML, CSS e JavaScript, em busca de uma oportunidade em desenvolvimento Web ou Programação.",
+    bio: "Tem 25 anos e está em fase de transição de carreira, vindo da área de informática rumo ao desenvolvimento Web. Está cursando a formação de programadores da Dev Club, onde vem se desenvolvendo em tecnologias como HTML, CSS e JavaScript, em busca de uma oportunidade em desenvolvimento Web ou Programação.",
   },
 ]

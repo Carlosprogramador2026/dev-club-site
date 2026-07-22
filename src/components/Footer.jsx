@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="footer-col footer-newsletter">
           <h4>Newsletter</h4>
-          <p>Receba novidades da dev club no seu e-mail.</p>
+          <p>Receba novidades da Dev Club no seu e-mail.</p>
           <form
             action="https://rodolfomori.typeform.com/formulario-mba?typeform-source=lp.devclub.com.br"
             target="_blank"
@@ -105,7 +105,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <p>&copy; {new Date().getFullYear()} dev club. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Dev Club. Todos os direitos reservados.</p>
 
         <div className="footer-dev-credit">
           <span>Site desenvolvido por Carlos</span>

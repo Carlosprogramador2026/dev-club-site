@@ -91,7 +91,7 @@ export default function CursoPage() {
             )}
             <p>
               {curso.instrutor?.bio ??
-                "Essa trilha ainda não tem instrutor confirmado publicamente — assim que a dev club definir, entra aqui foto, nome e bio."}
+                "Essa trilha ainda não tem instrutor confirmado publicamente — assim que a Dev Club definir, entra aqui foto, nome e bio."}
             </p>
           </div>
         </div>

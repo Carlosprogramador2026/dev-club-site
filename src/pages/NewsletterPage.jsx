@@ -12,7 +12,7 @@ const BENEFICIOS = [
     desc: "O que tá mudando em tecnologia e como isso afeta quem busca a primeira vaga.",
   },
   {
-    titulo: "Conteúdo da dev club",
+    titulo: "Conteúdo da Dev Club",
     desc: "Avisos de novas trilhas, eventos e materiais antes de qualquer outro lugar.",
   },
 ]
@@ -31,7 +31,7 @@ export default function NewsletterPage() {
           <span className="gradient-text">tecnologia</span>
         </h1>
         <p className="section-subtitle" style={{ marginBottom: 40 }}>
-          Inscreva-se pra receber conteúdo da dev club direto no seu e-mail.
+          Inscreva-se pra receber conteúdo da Dev Club direto no seu e-mail.
         </p>
 
         <div className="diferenciais-grid" style={{ marginBottom: 56 }}>

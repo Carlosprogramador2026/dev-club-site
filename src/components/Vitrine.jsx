@@ -29,7 +29,7 @@ export default function Vitrine() {
             <div className="vitrine-card vitrine-card--3">
               <span className="vitrine-card-label">Depoimento</span>
               <p>
-                &ldquo;A dev club me ajudou a montar currículo, LinkedIn e me
+                &ldquo;A Dev Club me ajudou a montar currículo, LinkedIn e me
                 preparar de verdade pra entrevista.&rdquo;
               </p>
             </div>
@@ -52,7 +52,7 @@ export default function Vitrine() {
         </Reveal>
 
         <h3 className="vitrine-freelas-titulo">
-          Quem já ganhou dinheiro com freelas na dev club
+          Quem já ganhou dinheiro com freelas na Dev Club
         </h3>
 
         <div className="depoimentos-grid vitrine-freelas-grid">

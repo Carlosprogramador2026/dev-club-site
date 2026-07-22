@@ -1,6 +1,6 @@
 export const FAQ_GERAL = [
   {
-    pergunta: "Como funciona o processo pra começar a estudar na dev club?",
+    pergunta: "Como funciona o processo pra começar a estudar na Dev Club?",
     resposta:
       "Basta se inscrever, acessar a plataforma e iniciar as aulas no seu ritmo.",
   },

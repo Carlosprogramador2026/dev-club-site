@@ -11,9 +11,9 @@ export default function BlogPage() {
         </Link>
 
         <span className="section-tag">Blog</span>
-        <h1 className="section-title">Conteúdo da dev club</h1>
+        <h1 className="section-title">Conteúdo da Dev Club</h1>
         <p className="section-subtitle" style={{ marginBottom: 40 }}>
-          Conteúdo técnico produzido pela dev club, direto pra você aplicar no
+          Conteúdo técnico produzido pela Dev Club, direto pra você aplicar no
           dia a dia.
         </p>
 

@@ -7,7 +7,7 @@ export default function Depoimentos() {
     <section id="depoimentos">
       <div className="container">
         <span className="section-tag">Depoimentos</span>
-        <h2 className="section-title">Quem passou pela dev club</h2>
+        <h2 className="section-title">Quem passou pela Dev Club</h2>
         <p className="section-subtitle">
           Relatos reais de quem trocou de carreira e conseguiu a primeira
           vaga como programador.

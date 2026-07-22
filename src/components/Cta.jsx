@@ -15,7 +15,7 @@ export default function Cta() {
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          Falar com a dev club
+          Falar com a Dev Club
         </a>
       </div>
     </section>

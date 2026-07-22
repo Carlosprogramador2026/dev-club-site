@@ -2,7 +2,7 @@ import { asset } from "../utils/asset"
 
 const RODOLFO = {
   nome: "Rodolfo Mori",
-  cargo: "Fundador e professor da dev club",
+  cargo: "Fundador e professor da Dev Club",
   foto: asset("rodolfo.jpg"),
 }
 
@@ -31,7 +31,7 @@ export const CURSOS = [
     videoId: "C03GzXuzWCA",
     instrutor: {
       ...RODOLFO,
-      bio: "Fundador e professor da dev club, também assina essa trilha de fundamentos — a mesma base de front-end que aplica no dia a dia construindo interfaces com React, Angular e Svelte.",
+      bio: "Fundador e professor da Dev Club, também assina essa trilha de fundamentos — a mesma base de front-end que aplica no dia a dia construindo interfaces com React, Angular e Svelte.",
     },
   },
   {
@@ -205,7 +205,7 @@ export const INVESTIMENTO_CURSO = {
     "7 dias de garantia incondicional — se não gostar, devolvemos 100% do valor, sem burocracia.",
 }
 
-// Perfil de aluno da dev club (base: entrevista de instalação do MazyOS).
+// Perfil de aluno da Dev Club (base: entrevista de instalação do MazyOS).
 export const PUBLICO_ALVO = [
   {
     titulo: "Quem tá começando do zero",
@@ -230,7 +230,7 @@ export const FAQ_CURSO = [
   {
     pergunta: "Preciso ter experiência prévia pra fazer esse curso?",
     resposta:
-      "Não! A dev club foi criada pra iniciantes. Começamos do zero absoluto e avançamos aos poucos, sempre com didática clara e prática.",
+      "Não! A Dev Club foi criada pra iniciantes. Começamos do zero absoluto e avançamos aos poucos, sempre com didática clara e prática.",
   },
   {
     pergunta: "Qual o sistema de pagamento utilizado? É seguro?",
