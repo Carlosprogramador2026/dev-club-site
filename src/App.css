@@ -1530,35 +1530,92 @@
   z-index: 2;
 }
 
-.notebook-code {
+/* Vitrine dentro da tela do notebook: logo com brilho roxo estatico +
+   texto "decifrando" (cintila caracteres aleatorios ate assentar letra
+   por letra, com flash roxo no instante de cada letra assentar). */
+.notebook-showcase {
   position: absolute;
   inset: 0;
-  margin: 0;
-  padding: 14px 16px;
-  font-family: "Courier New", monospace;
-  font-size: 0.62rem;
-  line-height: 1.35;
-  color: rgba(0, 255, 163, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px;
   overflow: hidden;
 }
 
-.notebook-code-track {
-  display: flex;
-  flex-direction: column;
-  animation: notebook-scroll-up 16s linear infinite;
+.notebook-showcase-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 35%,
+    rgba(139, 47, 206, 0.4),
+    transparent 68%
+  );
+  opacity: 0.6;
+  pointer-events: none;
 }
 
-.notebook-code-line {
+/* brilho roxo estatico (pulso leve) ao redor do logo, sem girar —
+   reaproveita a respiracao de opacidade ja' usada no arco/tela do notebook */
+.notebook-avatar-glow {
+  position: relative;
+  z-index: 1;
+  width: clamp(52px, 15vw, 84px);
+  height: clamp(52px, 15vw, 84px);
   flex-shrink: 0;
-  white-space: pre;
+  border-radius: 50%;
+  box-shadow:
+    0 0 24px 6px rgba(200, 160, 255, 0.55),
+    0 0 50px 18px rgba(124, 77, 255, 0.4),
+    0 0 90px 34px rgba(98, 40, 215, 0.25);
+  animation: glow-arc-breathe 5s ease-in-out infinite;
 }
 
-@keyframes notebook-scroll-up {
-  from {
-    transform: translateY(0);
+.notebook-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* texto decifrando: enquanto a letra nao "assenta" ela cintila
+   caracteres aleatorios; no instante em que assenta recebe um flash
+   roxo que esvai pra cor normal do texto */
+.notebook-typewriter {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 92%;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: clamp(0.66rem, 2.4vw, 0.9rem);
+  letter-spacing: 0.02em;
+}
+
+.notebook-letter {
+  display: inline-block;
+  color: var(--text-dim);
+}
+
+.notebook-letter--on {
+  animation: notebook-letter-flash 0.45s ease-out forwards;
+}
+
+@keyframes notebook-letter-flash {
+  0% {
+    color: #e9d9ff;
+    text-shadow: 0 0 6px #b586ff, 0 0 18px #8b2fce, 0 0 32px #8b2fce;
   }
-  to {
-    transform: translateY(-50%);
+  40% {
+    color: #f2eefa;
+    text-shadow: 0 0 10px #b586ff, 0 0 26px #8b2fce, 0 0 40px #8b2fce;
+  }
+  100% {
+    color: var(--text);
+    text-shadow: none;
   }
 }
 
@@ -1659,9 +1716,14 @@
 @media (prefers-reduced-motion: reduce) {
   .glow-arc,
   .notebook-screen,
-  .notebook-code-track,
+  .notebook-avatar-glow,
   .glow-sparkle {
     animation: none;
+  }
+
+  .notebook-letter--on {
+    animation: none;
+    color: var(--text);
   }
 }
 
