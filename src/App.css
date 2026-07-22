@@ -1530,132 +1530,35 @@
   z-index: 2;
 }
 
-/* Vitrine dentro da tela do notebook: logo com anel RGB girando +
-   texto soletrando com flash roxo por letra (troca a antiga rolagem
-   de codigo). */
-.notebook-showcase {
+.notebook-code {
   position: absolute;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 12px;
+  margin: 0;
+  padding: 14px 16px;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  line-height: 1.35;
+  color: rgba(0, 255, 163, 0.85);
   overflow: hidden;
 }
 
-.notebook-showcase-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 50% 35%,
-    rgba(139, 47, 206, 0.4),
-    transparent 68%
-  );
-  opacity: 0.6;
-  pointer-events: none;
+.notebook-code-track {
+  display: flex;
+  flex-direction: column;
+  animation: notebook-scroll-up 16s linear infinite;
 }
 
-/* anel conic-gradient RGB girando ao redor do logo — so' anima transform */
-.notebook-avatar-ring {
-  position: relative;
-  z-index: 1;
-  width: clamp(48px, 14vw, 84px);
-  height: clamp(48px, 14vw, 84px);
+.notebook-code-line {
   flex-shrink: 0;
+  white-space: pre;
 }
 
-.notebook-avatar-ring::before {
-  content: "";
-  position: absolute;
-  inset: -5px;
-  border-radius: 50%;
-  padding: 5px;
-  background: conic-gradient(
-    from 0deg,
-    #ff2d78,
-    #ff9900,
-    #f6ff00,
-    #00ffa3,
-    #00c2ff,
-    #00ff88,
-    #ff2d78
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  filter: blur(4px);
-  animation: notebook-ring-spin 5s linear infinite;
-}
-
-@keyframes notebook-ring-spin {
+@keyframes notebook-scroll-up {
+  from {
+    transform: translateY(0);
+  }
   to {
-    transform: rotate(360deg);
-  }
-}
-
-.notebook-avatar {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 0 18px 4px rgba(139, 47, 206, 0.55);
-}
-
-/* texto soletrando: cada letra some ate sua vez, entao recebe um flash
-   roxo que desaparece rapido, deixando a letra na cor normal do texto */
-.notebook-typewriter {
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  max-width: 92%;
-  text-align: center;
-  font-family: "Courier New", monospace;
-  font-size: clamp(0.66rem, 2.4vw, 0.9rem);
-  letter-spacing: 0.02em;
-}
-
-.notebook-letter {
-  color: var(--text);
-  opacity: 0;
-}
-
-.notebook-letter--on {
-  animation: notebook-letter-flash 0.5s ease-out forwards;
-}
-
-@keyframes notebook-letter-flash {
-  0% {
-    opacity: 0;
-    color: #e9d9ff;
-    text-shadow: 0 0 6px #b586ff, 0 0 18px #8b2fce, 0 0 32px #8b2fce;
-  }
-  35% {
-    opacity: 1;
-    color: #f2eefa;
-    text-shadow: 0 0 10px #b586ff, 0 0 26px #8b2fce, 0 0 40px #8b2fce;
-  }
-  100% {
-    opacity: 1;
-    color: var(--text);
-    text-shadow: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .notebook-avatar-ring::before {
-    animation: none;
-  }
-
-  .notebook-letter--on {
-    animation: none;
-    opacity: 1;
+    transform: translateY(-50%);
   }
 }
 
@@ -1756,6 +1659,7 @@
 @media (prefers-reduced-motion: reduce) {
   .glow-arc,
   .notebook-screen,
+  .notebook-code-track,
   .glow-sparkle {
     animation: none;
   }

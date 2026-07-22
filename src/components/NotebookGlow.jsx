@@ -1,5 +1,5 @@
 import AmbientParticles from "./AmbientParticles"
-import NotebookShowcase from "./NotebookShowcase"
+import NotebookCode from "./NotebookCode"
 
 const SPARKLE_COUNT = 10
 
@@ -11,7 +11,7 @@ export default function NotebookGlow() {
       <div className="notebook">
         <div className="notebook-screen">
           <span className="notebook-cam" />
-          <NotebookShowcase />
+          <NotebookCode />
         </div>
         <div className="notebook-base">
           <span className="notebook-trackpad" />
