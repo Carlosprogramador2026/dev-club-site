@@ -1530,9 +1530,11 @@
   z-index: 2;
 }
 
-/* Vitrine dentro da tela do notebook: logo com brilho roxo estatico +
-   texto "decifrando" (cintila caracteres aleatorios ate assentar letra
-   por letra, com flash roxo no instante de cada letra assentar). */
+/* Vitrine dentro da tela do notebook: logo com brilho azul estatico +
+   tag/titulo/subtitulo "decifrando" em sequencia (cintila caracteres
+   aleatorios ate assentar letra por letra, com flash azul no instante
+   de cada letra assentar) — baseado no video de referencia (icone +
+   texto decodificando em tons de azul). */
 .notebook-showcase {
   position: absolute;
   inset: 0;
@@ -1540,7 +1542,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 6px;
   padding: 12px;
   overflow: hidden;
 }
@@ -1550,26 +1552,27 @@
   inset: 0;
   background: radial-gradient(
     circle at 50% 35%,
-    rgba(139, 47, 206, 0.4),
+    rgba(30, 110, 220, 0.4),
     transparent 68%
   );
   opacity: 0.6;
   pointer-events: none;
 }
 
-/* brilho roxo estatico (pulso leve) ao redor do logo, sem girar —
+/* brilho azul estatico (pulso leve) ao redor do logo, sem girar —
    reaproveita a respiracao de opacidade ja' usada no arco/tela do notebook */
 .notebook-avatar-glow {
   position: relative;
   z-index: 1;
-  width: clamp(52px, 15vw, 84px);
-  height: clamp(52px, 15vw, 84px);
+  width: clamp(48px, 13vw, 76px);
+  height: clamp(48px, 13vw, 76px);
   flex-shrink: 0;
+  margin-bottom: 6px;
   border-radius: 50%;
   box-shadow:
-    0 0 24px 6px rgba(200, 160, 255, 0.55),
-    0 0 50px 18px rgba(124, 77, 255, 0.4),
-    0 0 90px 34px rgba(98, 40, 215, 0.25);
+    0 0 24px 6px rgba(71, 191, 255, 0.55),
+    0 0 50px 18px rgba(47, 143, 255, 0.4),
+    0 0 90px 34px rgba(20, 70, 180, 0.28);
   animation: glow-arc-breathe 5s ease-in-out infinite;
 }
 
@@ -1581,20 +1584,44 @@
   display: block;
 }
 
-/* texto decifrando: enquanto a letra nao "assenta" ela cintila
-   caracteres aleatorios; no instante em que assenta recebe um flash
-   roxo que esvai pra cor normal do texto */
-.notebook-typewriter {
+/* tag pequena acima do titulo, tipo "0xA13F9D2C" */
+.notebook-tag {
   position: relative;
   z-index: 1;
-  margin: 0;
-  max-width: 92%;
-  text-align: center;
+  margin: 0 0 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
   font-family: "Courier New", monospace;
-  font-size: clamp(0.66rem, 2.4vw, 0.9rem);
+  font-size: clamp(0.56rem, 1.8vw, 0.68rem);
   letter-spacing: 0.02em;
 }
 
+.notebook-titulo,
+.notebook-subtitulo {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 94%;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.02em;
+}
+
+.notebook-titulo {
+  font-weight: 700;
+  font-size: clamp(0.74rem, 2.8vw, 1.02rem);
+}
+
+.notebook-subtitulo {
+  margin-top: 2px;
+  font-size: clamp(0.6rem, 2vw, 0.76rem);
+  color: var(--text-dim);
+}
+
+/* texto decifrando: enquanto a letra nao "assenta" ela cintila
+   caracteres aleatorios; no instante em que assenta recebe um flash
+   azul que esvai pra cor normal do texto */
 .notebook-letter {
   display: inline-block;
   color: var(--text-dim);
@@ -1606,12 +1633,12 @@
 
 @keyframes notebook-letter-flash {
   0% {
-    color: #e9d9ff;
-    text-shadow: 0 0 6px #b586ff, 0 0 18px #8b2fce, 0 0 32px #8b2fce;
+    color: #cfe9ff;
+    text-shadow: 0 0 6px #47bfff, 0 0 18px #1f6feb, 0 0 32px #1f6feb;
   }
   40% {
     color: #f2eefa;
-    text-shadow: 0 0 10px #b586ff, 0 0 26px #8b2fce, 0 0 40px #8b2fce;
+    text-shadow: 0 0 10px #47bfff, 0 0 26px #1f6feb, 0 0 40px #1f6feb;
   }
   100% {
     color: var(--text);
