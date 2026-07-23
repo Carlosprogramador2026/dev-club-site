@@ -185,6 +185,18 @@ section {
   );
 }
 
+/* Trilha de fluido (FluidCursor) — cobre a tela toda, mas pointer-events:
+   none pra nunca bloquear clique/hover em nada por baixo dela. */
+.fluid-cursor-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 60;
+  pointer-events: none;
+  touch-action: none;
+}
+
 .glow-orb {
   position: absolute;
   border-radius: 50%;
