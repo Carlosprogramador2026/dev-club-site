@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="hero-blackhole" aria-hidden="true">
         <BlackHole
           colors={["#00ffa3", "#39ff88", "#1e88ff"]}
-          particleCount={350}
+          particleCount={200}
           particleSize={3}
           outerRadius={85}
           orbitSpeed={3}
