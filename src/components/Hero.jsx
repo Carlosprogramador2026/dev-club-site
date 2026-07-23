@@ -1,5 +1,6 @@
 import ParticleField from "./ParticleField"
 import Counter from "./Counter"
+import BlackHole from "./BlackHole"
 import { asset } from "../utils/asset"
 
 const ALUNOS_FOTOS = [
@@ -13,6 +14,20 @@ export default function Hero() {
     <section id="top" className="hero">
       <div className="hero-bg-overlay" />
       <ParticleField />
+
+      <div className="hero-blackhole" aria-hidden="true">
+        <BlackHole
+          colors={["#00ffa3", "#39ff88", "#1e88ff"]}
+          particleCount={350}
+          particleSize={3}
+          outerRadius={85}
+          orbitSpeed={3}
+          trail={45}
+          tilt={35}
+          tiltSideway={140}
+          style={{ background: "transparent" }}
+        />
+      </div>
 
       <div className="container hero-inner">
         <div className="hero-copy">
