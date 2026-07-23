@@ -6,14 +6,7 @@ export default function Sobre() {
     <section id="sobre">
       <div className="container">
         <span className="section-tag">Sobre</span>
-        <h2 className="section-title sobre-titulo">
-          Quem é a{" "}
-          <img
-            src={asset("logo-devclub.jpeg")}
-            alt="Dev Club"
-            className="sobre-titulo-logo"
-          />
-        </h2>
+        <h2 className="section-title">Quem é a Dev Club</h2>
 
         <Reveal>
           <div className="sobre-row">

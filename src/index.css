@@ -149,20 +149,6 @@ section {
   margin: 0 0 16px;
 }
 
-.sobre-titulo {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0 14px;
-}
-
-.sobre-titulo-logo {
-  height: 1em;
-  width: auto;
-  border-radius: 8px;
-  vertical-align: middle;
-}
-
 .section-subtitle {
   color: var(--text-dim);
   font-size: 1.05rem;

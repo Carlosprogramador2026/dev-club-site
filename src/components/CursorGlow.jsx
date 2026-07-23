@@ -18,7 +18,7 @@ export default function CursorGlow() {
       glow.style.setProperty("--y", `${e.clientY}px`)
       glow.style.opacity = "1"
 
-      const card = e.target.closest(TILT_SELECTOR)
+      const card = e.target instanceof Element ? e.target.closest(TILT_SELECTOR) : null
       if (!card) return
       const rect = card.getBoundingClientRect()
       const px = (e.clientX - rect.left) / rect.width - 0.5
@@ -32,7 +32,7 @@ export default function CursorGlow() {
     }
 
     function handleOut(e) {
-      const card = e.target.closest(TILT_SELECTOR)
+      const card = e.target instanceof Element ? e.target.closest(TILT_SELECTOR) : null
       if (!card || card.contains(e.relatedTarget)) return
       card.style.setProperty("--rx", "0deg")
       card.style.setProperty("--ry", "0deg")
