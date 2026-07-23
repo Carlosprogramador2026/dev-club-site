@@ -4,7 +4,6 @@ import Footer from "./components/Footer"
 import BackToTop from "./components/BackToTop"
 import ScrollToTop from "./components/ScrollToTop"
 import CursorGlow from "./components/CursorGlow"
-import FluidCursor from "./components/FluidCursor"
 import Home from "./pages/Home"
 import CursoPage from "./pages/CursoPage"
 import DepoimentoPage from "./pages/DepoimentoPage"
@@ -19,7 +18,6 @@ function App() {
     <>
       <ScrollToTop />
       <CursorGlow />
-      <FluidCursor />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
